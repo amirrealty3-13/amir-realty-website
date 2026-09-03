@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amir Realty — your trusted property partner for buying, selling, renting and investing in premium real estate opportunities.">
+  <meta name="theme-color" content="#080808">
+  <title>Amir Realty | Your Trusted Property Partner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#home">
+      <img src="assets/amir-realty-logo.png" alt="Amir Realty">
+    </a>
+    <button class="menu" aria-label="Open menu">☰</button>
+    <nav>
+      <a href="#properties">Properties</a>
+      <a href="#projects">Projects</a>
+      <a href="#investment">Investment</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/923305522260?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details." target="_blank" rel="noopener">WhatsApp</a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">AMIR REALTY • PAKISTAN</p>
+        <h1>Find a place<br><span>worth investing in.</span></h1>
+        <p class="hero-copy">Buy, sell, rent and invest with a property partner focused on clarity, opportunity and long-term value.</p>
+        <div class="hero-actions">
+          <a class="btn gold" href="#properties">Explore Properties</a>
+          <a class="btn ghost" href="#contact">Talk to an Advisor</a>
+        </div>
+      </div>
+      <div class="hero-bottom">
+        <div><span>01</span> BUY</div>
+        <div><span>02</span> SELL</div>
+        <div><span>03</span> RENT</div>
+        <div><span>04</span> INVEST</div>
+      </div>
+    </section>
+
+    <section class="search-panel">
+      <div>
+        <p class="eyebrow">PROPERTY FINDER</p>
+        <h2>What are you looking for?</h2>
+      </div>
+      <div class="filters">
+        <select><option>Purpose</option><option>Buy</option><option>Rent</option></select>
+        <select><option>Property Type</option><option>House</option><option>Plot</option><option>Apartment</option><option>Commercial</option></select>
+        <select><option>Location</option><option>New Metro City Kharian – Sarai Alamgir</option><option>Other</option></select>
+        <button class="btn gold" onclick="document.querySelector('#properties').scrollIntoView({behavior:'smooth'})">Search</button>
+      </div>
+    </section>
+
+    <section id="properties" class="section">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">CURATED OPPORTUNITIES</p>
+          <h2>Featured Properties</h2>
+        </div>
+        <p>Browse a premium selection. Actual prices and availability can be updated from the property inventory.</p>
+      </div>
+      <div class="property-grid">
+        <article class="property-card reveal">
+          <img src="assets/project-entrance.jpg" alt="New Metro City entrance">
+          <div class="card-body">
+            <span class="tag">FOR SALE</span>
+            <h3>Residential Property</h3>
+            <p>New Metro City Kharian – Sarai Alamgir</p>
+            <div class="card-row"><strong>Premium Location</strong><a href="#contact">Enquire →</a></div>
+          </div>
+        </article>
+        <article class="property-card reveal">
+          <img src="assets/community-center.png" alt="Community facilities">
+          <div class="card-body">
+            <span class="tag">FOR RENT</span>
+            <h3>Apartment / Living Space</h3>
+            <p>Prime residential community</p>
+            <div class="card-row"><strong>Contact for availability</strong><a href="#contact">Enquire →</a></div>
+          </div>
+        </article>
+        <article class="property-card reveal">
+          <img src="assets/project-view-1.jpg" alt="New Metro City project view">
+          <div class="card-body">
+            <span class="tag">INVESTMENT</span>
+            <h3>Plot Opportunities</h3>
+            <p>New Metro City Kharian – Sarai Alamgir</p>
+            <div class="card-row"><strong>Ask for current inventory</strong><a href="#contact">Details →</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section dark">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">FEATURED PROJECT</p>
+          <h2>New Metro City</h2>
+        </div>
+        <p>Kharian – Sarai Alamgir</p>
+      </div>
+      <div class="project-feature">
+        <img src="assets/project-view-2.jpg" alt="New Metro City landscaped community">
+        <div class="project-copy">
+          <img class="nmc-logo" src="assets/new-metro-city-logo.png" alt="New Metro City logo">
+          <h3>A community designed for modern living.</h3>
+          <p>Explore residential and investment opportunities and speak with Amir Realty for current inventory, pricing and payment options.</p>
+          <div class="chips">
+            <span>Residential</span><span>Investment</span><span>Community</span><span>Location</span>
+          </div>
+          <a class="btn gold" href="#contact">Request Project Details</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="investment" class="investment section">
+      <div class="investment-content reveal">
+        <p class="eyebrow">INVESTMENT WITH CLARITY</p>
+        <h2>Invest today.<br><span>Build tomorrow.</span></h2>
+        <p>Good property decisions start with the right information. Amir Realty helps you compare opportunities, understand locations and move forward with confidence.</p>
+        <a class="btn gold" href="#contact">Speak to an Advisor</a>
+      </div>
+      <div class="stats reveal">
+        <div><strong>01</strong><span>Property Search</span></div>
+        <div><strong>02</strong><span>Deal Guidance</span></div>
+        <div><strong>03</strong><span>Investment Support</span></div>
+        <div><strong>04</strong><span>After-Sale Care</span></div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="about-logo reveal"><img src="assets/amir-realty-logo.png" alt="Amir Realty logo"></div>
+      <div class="reveal">
+        <p class="eyebrow">ABOUT AMIR REALTY</p>
+        <h2>Your trusted property partner.</h2>
+        <p>We connect buyers, sellers, renters and investors with real-estate opportunities through a straightforward, professional process.</p>
+        <div class="values">
+          <div><b>01</b><span>Clear Communication</span></div>
+          <div><b>02</b><span>Property-Focused Guidance</span></div>
+          <div><b>03</b><span>Long-Term Relationships</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="contact-copy reveal">
+        <p class="eyebrow">LET'S TALK PROPERTY</p>
+        <h2>Tell us what<br><span>you're looking for.</span></h2>
+        <p>Call or WhatsApp Amir Realty for current property options, prices and availability.</p>
+        <a class="phone" href="tel:+923305522260">0330-5522260</a>
+      </div>
+      <form class="lead-form reveal" onsubmit="sendLead(event)">
+        <input id="name" required placeholder="Your name">
+        <input id="phone" required placeholder="Phone / WhatsApp number">
+        <select id="interest" required>
+          <option value="">I'm interested in…</option>
+          <option>House for Sale</option>
+          <option>Plot for Sale</option>
+          <option>Apartment for Rent</option>
+          <option>Investment Opportunity</option>
+          <option>Other</option>
+        </select>
+        <textarea id="message" rows="4" placeholder="Tell us your preferred location, size or budget"></textarea>
+        <button class="btn gold" type="submit">Send Inquiry on WhatsApp</button>
+        <small>Your message will open in WhatsApp with Amir Realty.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="assets/amir-realty-logo.png" alt="Amir Realty"></div>
+    <div>BUY • SELL • RENT • INVEST</div>
+    <div>© <span id="year"></span> Amir Realty. All rights reserved.</div>
+  </footer>
+
+  <a class="float-wa" href="https://wa.me/923305522260?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details." target="_blank" rel="noopener" aria-label="WhatsApp Amir Realty">WA</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
