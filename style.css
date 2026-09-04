@@ -1428,219 +1428,579 @@ p{
 
 
 /* =========================================================
-   GOLDEN KEY
+   GOLDEN KEY — REALISTIC HERO KEY
 ========================================================= */
 
 .gold-key{
 
-  position:relative;
+  position:absolute;
 
-  width:330px;
-  height:330px;
+  width:430px;
+  height:260px;
+
+  left:50%;
+  top:50%;
 
   transform:
-    rotate(-35deg);
+    translate(-50%,-50%)
+    rotate(-14deg);
+
+  z-index:8;
+
+  animation:
+    realisticKeyFloat 5s ease-in-out infinite;
 
   filter:
     drop-shadow(
-      0 0 25px
-      rgba(240,217,148,.18)
+      0 20px 25px
+      rgba(0,0,0,.45)
+    )
+    drop-shadow(
+      0 0 28px
+      rgba(240,217,148,.28)
     );
 
-  animation:
-    keyFloat 5s ease-in-out infinite;
-
-}
-
-@keyframes keyFloat{
-
-  0%,100%{
-    transform:
-      rotate(-35deg)
-      translateY(0);
-  }
-
-  50%{
-    transform:
-      rotate(-32deg)
-      translateY(-12px);
-  }
+  overflow:visible;
 
 }
 
 
-/* key head */
+/* =========================================================
+   KEY BODY
+========================================================= */
+
+.gold-key::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:250px;
+  height:54px;
+
+  left:125px;
+  top:103px;
+
+  border-radius:8px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+
+      #6d4913 0%,
+      #b88731 12%,
+      #f1d47d 27%,
+      #fff1ae 43%,
+      #d8b65f 62%,
+      #9b7025 82%,
+      #e5c66f 100%
+    );
+
+  box-shadow:
+
+    inset
+    0 3px 2px
+    rgba(255,255,255,.55),
+
+    inset
+    0 -5px 7px
+    rgba(70,40,5,.45),
+
+    0 5px 12px
+    rgba(0,0,0,.35);
+
+}
+
+
+/* =========================================================
+   KEY HEAD
+========================================================= */
 
 .key-head{
 
   position:absolute;
 
-  width:125px;
-  height:125px;
+  width:150px;
+  height:150px;
 
-  left:10px;
-  top:20px;
+  left:0;
+  top:55px;
 
   border-radius:50%;
 
   background:
 
     radial-gradient(
-      circle at 35% 30%,
-      #fff1b0,
-      #e8ca78 25%,
-      #b98d3d 65%,
-      #77521d 100%
+      circle at 30% 25%,
+
+      #fff4bd 0%,
+      #f2d982 18%,
+      #d3ac50 42%,
+      #a47728 68%,
+      #66420e 100%
     );
+
+  border:
+    3px solid
+    rgba(255,232,153,.7);
 
   box-shadow:
 
     inset
-    -10px -12px 20px
-    rgba(76,48,12,.35),
+    10px 10px 18px
+    rgba(255,246,193,.5),
 
     inset
-    8px 8px 18px
-    rgba(255,239,171,.55),
+    -14px -15px 22px
+    rgba(65,38,5,.5),
 
-    0 0 25px
-    rgba(230,194,101,.22);
+    0 8px 18px
+    rgba(0,0,0,.42),
+
+    0 0 30px
+    rgba(240,217,148,.22);
 
 }
 
 
-/* inner hole */
+/* =========================================================
+   KEY INNER RIM
+========================================================= */
+
+.key-head::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:83px;
+  height:83px;
+
+  left:30px;
+  top:30px;
+
+  border-radius:50%;
+
+  border:
+    5px solid
+    rgba(255,230,145,.65);
+
+  box-shadow:
+
+    inset
+    0 0 18px
+    rgba(60,38,5,.65);
+
+}
+
+
+/* =========================================================
+   KEY HOLE
+========================================================= */
 
 .key-hole{
 
   position:absolute;
 
-  width:43px;
-  height:43px;
+  width:53px;
+  height:53px;
 
-  left:41px;
-  top:41px;
+  left:48px;
+  top:48px;
 
   border-radius:50%;
 
-  background:#080b09;
+  background:
+
+    radial-gradient(
+      circle,
+      #020403 0%,
+      #07100c 55%,
+      #101b16 100%
+    );
+
+  border:
+    2px solid
+    rgba(80,55,15,.9);
 
   box-shadow:
 
     inset
-    0 0 12px
-    rgba(0,0,0,.9),
+    0 0 16px
+    rgba(0,0,0,.95),
 
-    0 0 0 7px
-    rgba(255,230,151,.12);
+    0 0 0 4px
+    rgba(255,224,137,.14);
 
 }
 
 
-/* key neck */
+/* =========================================================
+   KEY NECK
+========================================================= */
 
 .key-neck{
 
   position:absolute;
 
-  width:58px;
-  height:100px;
+  width:48px;
+  height:62px;
 
-  left:77px;
-  top:105px;
+  left:118px;
+  top:100px;
 
   background:
 
     linear-gradient(
       90deg,
-      #7b581e,
-      #e9cc79 28%,
-      #fff0ac 50%,
-      #c49a48 72%,
-      #704c18
+      #755019,
+      #d4ad56 25%,
+      #fff0a8 50%,
+      #c29643 75%,
+      #704a13
     );
 
-  box-shadow:
-
-    inset
-    5px 0 8px
-    rgba(255,242,178,.35),
-
-    inset
-    -7px 0 10px
-    rgba(54,32,5,.35);
+  z-index:2;
 
 }
 
 
-/* shaft */
+/* =========================================================
+   KEY SHAFT
+========================================================= */
 
 .key-shaft{
 
   position:absolute;
 
-  width:62px;
-  height:190px;
+  width:225px;
+  height:48px;
 
-  left:75px;
-  top:175px;
+  left:105px;
+  top:106px;
 
   background:
 
     linear-gradient(
-      90deg,
-      #76511a,
-      #d5b45d 24%,
-      #ffe9a0 50%,
-      #c79b48 76%,
-      #714c17
+      180deg,
+      #765018 0%,
+      #c99e47 20%,
+      #ffe99c 42%,
+      #d8b55e 68%,
+      #815919 100%
     );
+
+  border-radius:6px;
 
   box-shadow:
 
     inset
-    5px 0 10px
-    rgba(255,244,186,.3),
+    0 3px 3px
+    rgba(255,248,195,.55),
 
     inset
-    -8px 0 12px
-    rgba(55,32,5,.4);
+    0 -5px 8px
+    rgba(68,40,6,.42);
 
 }
 
 
-/* key cuts */
+/* =========================================================
+   SHAFT CENTER HIGHLIGHT
+========================================================= */
+
+.key-shaft::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:12px;
+  right:12px;
+  top:8px;
+
+  height:5px;
+
+  border-radius:50%;
+
+  background:
+    rgba(255,247,190,.6);
+
+  filter:blur(1px);
+
+}
+
+
+/* =========================================================
+   KEY CUTS
+========================================================= */
 
 .key-cut{
 
   position:absolute;
 
-  width:32px;
-  height:27px;
+  width:38px;
+  height:28px;
 
-  right:-1px;
+  right:-2px;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      #d9b75e,
+      #fff0a0,
+      #9c7227
+    );
+
+  box-shadow:
+
+    inset
+    0 2px 2px
+    rgba(255,255,255,.45);
+
+}
+
+
+/* FIRST TOOTH */
+
+.cut-one{
+
+  right:12px;
+  bottom:-27px;
+
+}
+
+
+/* SECOND TOOTH */
+
+.cut-two{
+
+  right:50px;
+  bottom:-20px;
+
+}
+
+
+/* THIRD TOOTH */
+
+.cut-three{
+
+  right:88px;
+  bottom:-13px;
+
+}
+
+
+/* =========================================================
+   KEY END CAP
+========================================================= */
+
+.key-shaft::after{
+
+  content:"";
+
+  position:absolute;
+
+  right:-15px;
+  top:5px;
+
+  width:18px;
+  height:38px;
+
+  border-radius:4px;
 
   background:
 
     linear-gradient(
       90deg,
-      #a6792e,
-      #e5c875,
-      #8e6421
+      #7a5218,
+      #f0d27b,
+      #a5792a
     );
 
 }
 
-.cut-one{
-  bottom:68px;
+
+/* =========================================================
+   MOVING METAL REFLECTION
+========================================================= */
+
+.gold-key .key-hole::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:7px;
+  height:100px;
+
+  left:-80px;
+  top:-25px;
+
+  transform:
+    rotate(35deg);
+
+  background:
+
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255,244,181,.65),
+      transparent
+    );
+
+  filter:blur(5px);
+
+  animation:
+    keyReflection 4s ease-in-out infinite;
+
 }
 
-.cut-two{
-  bottom:35px;
+
+/* =========================================================
+   REALISTIC KEY FLOAT
+========================================================= */
+
+@keyframes realisticKeyFloat{
+
+  0%,100%{
+
+    transform:
+      translate(-50%,-50%)
+      rotate(-14deg)
+      translateY(0);
+
+  }
+
+  50%{
+
+    transform:
+      translate(-50%,-50%)
+      rotate(-10deg)
+      translateY(-13px);
+
+  }
+
 }
 
-.cut-three{
-  bottom:0;
+
+/* =========================================================
+   GOLD REFLECTION
+========================================================= */
+
+@keyframes keyReflection{
+
+  0%{
+
+    left:-80px;
+    opacity:0;
+
+  }
+
+  35%{
+
+    opacity:.7;
+
+  }
+
+  65%{
+
+    opacity:.9;
+
+  }
+
+  100%{
+
+    left:170px;
+    opacity:0;
+
+  }
+
+}
+
+
+/* =========================================================
+   GOLD KEY RESPONSIVE
+========================================================= */
+
+@media(max-width:1080px){
+
+  .gold-key{
+
+    width:380px;
+    height:240px;
+
+    transform:
+      translate(-50%,-50%)
+      rotate(-14deg)
+      scale(.9);
+
+  }
+
+}
+
+
+@media(max-width:760px){
+
+  .gold-key{
+
+    width:340px;
+    height:220px;
+
+    transform:
+      translate(-50%,-50%)
+      rotate(-14deg)
+      scale(.82);
+
+  }
+
+}
+
+
+@media(max-width:480px){
+
+  .gold-key{
+
+    width:310px;
+    height:200px;
+
+    transform:
+      translate(-50%,-50%)
+      rotate(-14deg)
+      scale(.72);
+
+  }
+
+}
+
+
+@media(max-width:390px){
+
+  .gold-key{
+
+    width:290px;
+    height:190px;
+
+    transform:
+      translate(-50%,-50%)
+      rotate(-14deg)
+      scale(.65);
+
+  }
+
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+  .gold-key{
+
+    animation:none;
+
+  }
+
 }
 
 
@@ -3666,13 +4026,12 @@ footer p{
 
   }
 
-  .gold-key{
-
-    transform:
-      rotate(-35deg)
-      scale(.82);
-
-  }
+  /*
+     GOLD KEY:
+     Responsive sizing is handled by the
+     dedicated GOLD KEY RESPONSIVE block above.
+     No conflicting transform here.
+  */
 
   .card-top{
 
@@ -3933,13 +4292,11 @@ footer p{
 
   }
 
-  .gold-key{
-
-    transform:
-      rotate(-35deg)
-      scale(.62);
-
-  }
+  /*
+     GOLD KEY:
+     Responsive sizing is handled by the
+     dedicated GOLD KEY RESPONSIVE block above.
+  */
 
   .halo-one{
 
@@ -4192,13 +4549,11 @@ footer p{
 
   }
 
-  .gold-key{
-
-    transform:
-      rotate(-35deg)
-      scale(.55);
-
-  }
+  /*
+     GOLD KEY:
+     Dedicated GOLD KEY RESPONSIVE block handles
+     the 290px / 190px / .65 scale.
+  */
 
   .key-floating-card{
 
