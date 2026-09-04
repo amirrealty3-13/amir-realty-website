@@ -3,448 +3,1493 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Amir Realty | New Metro City Kharian – Sarai Alamgir</title>
+
 <meta name="description" content="Amir Realty is your trusted property partner for buying, selling, renting and investing in New Metro City Kharian – Sarai Alamgir. Talk to an advisor on WhatsApp.">
+
 <meta name="theme-color" content="#0b0f0d">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Amir Realty | New Metro City Kharian – Sarai Alamgir">
-<meta property="og:description" content="Buy, sell, rent and invest in New Metro City Kharian – Sarai Alamgir with a property partner focused on clarity and long-term value.">
-<meta property="og:image" content="assets/entrance-gate-photo.jpg">
+<meta property="og:description" content="Buy, sell, rent and invest in New Metro City Kharian – Sarai Alamgir with Amir Realty.">
+<meta property="og:image" content="assets/entrance-gate-photo.png">
 
+<!-- Favicon only if file exists -->
 <link rel="icon" href="assets/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="assets/favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
 <header class="nav" id="siteNav">
+
   <a class="brand" href="#home">
-    <img src="assets/amir-realty-logo.png" alt="Amir Realty logo">
+    <img
+      src="assets/amir-realty-logo.png"
+      alt="Amir Realty logo"
+      onerror="this.style.display='none'"
+    >
     <span>Amir Realty</span>
   </a>
-  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
+
+  <button
+    class="menu-btn"
+    id="menuBtn"
+    aria-label="Toggle menu"
+    aria-expanded="false"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
+
   <nav class="nav-links" id="navLinks">
+
     <a href="#properties">Properties</a>
     <a href="#new-metro-city">New Metro City</a>
     <a href="#experience">Experience</a>
     <a href="#explore">Explore</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
-    <a class="btn btn-gold btn-sm nav-cta" href="https://wa.me/923086262091?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details." target="_blank" rel="noopener">Chat on WhatsApp</a>
+
+    <a
+      class="btn btn-gold btn-sm nav-cta"
+      href="https://wa.me/923086262091?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details."
+      target="_blank"
+      rel="noopener"
+    >
+      Chat on WhatsApp
+    </a>
+
   </nav>
+
 </header>
+
 
 <main id="home">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-copy reveal">
-      <p class="tag-label">New Metro City · Kharian – Sarai Alamgir</p>
-      <h1>Your dream property starts<br>with <em>one smart decision.</em></h1>
-      <p class="lede">Amir Realty helps you buy, sell, rent and invest in New Metro City Kharian – Sarai Alamgir with clear guidance from search to possession.</p>
-      <div class="hero-actions">
-        <a class="btn btn-gold" href="#properties">Explore Properties</a>
-        <a class="btn btn-glass" href="https://wa.me/923086262091?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details." target="_blank" rel="noopener">Talk on WhatsApp</a>
-      </div>
-    </div>
-    <div class="hero-visual reveal">
-      <div class="hero-frame">
-        <img src="assets/entrance-gate-photo.jpg" alt="New Metro City entrance gate" width="918" height="1152" loading="eager">
-        <div class="hero-chip">
-          <div>
-            <strong>Main Entrance</strong>
-            New Metro City Kharian – Sarai Alamgir
-          </div>
-        </div>
-      </div>
-      <div class="hero-ring" aria-hidden="true"></div>
-    </div>
-  </section>
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-  <!-- FINDER -->
-  <section class="finder reveal">
-    <div>
-      <p class="tag-label">Property Finder</p>
-      <h2>What are you looking for?</h2>
-    </div>
-    <div class="finder-fields">
-      <div class="field">
-        <label for="f-purpose">Purpose</label>
-        <select id="f-purpose">
-          <option value="">Any purpose</option>
-          <option value="sale">Buy</option>
-          <option value="rent">Rent</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="f-type">Property type</label>
-        <select id="f-type">
-          <option value="">Any type</option>
-          <option value="house">House</option>
-          <option value="plot">Plot</option>
-          <option value="apartment">Apartment</option>
-          <option value="commercial">Commercial</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="f-location">Location</label>
-        <select id="f-location">
-          <option value="">Any location</option>
-          <option value="nmc">New Metro City Kharian – Sarai Alamgir</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-      <div class="field" style="justify-content:flex-end">
-        <label>&nbsp;</label>
-        <button class="btn btn-gold" id="findBtn" type="button">Search</button>
-      </div>
-    </div>
-  </section>
+<section class="hero">
 
-  <!-- PROPERTIES -->
-  <section id="properties" class="section">
-    <div class="section-head reveal">
-      <div>
-        <p class="tag-label">Curated Opportunities</p>
-        <h2>Featured properties</h2>
-      </div>
-      <p class="lede">A starting selection to browse. Prices, plot sizes and availability are confirmed directly with our team, as inventory updates often.</p>
-    </div>
+  <div class="hero-copy reveal">
 
-    <div class="property-grid reveal" id="propertyGrid">
-      <article class="p-card" data-purpose="sale" data-type="plot" data-location="nmc">
-        <div class="img-wrap">
-          <img src="assets/entrance-gate-photo.jpg" alt="Residential plot near New Metro City entrance" loading="lazy">
-          <span class="p-status">For Sale</span>
-        </div>
-        <div class="p-body">
-          <h3>Residential Plot</h3>
-          <p class="loc">New Metro City Kharian – Sarai Alamgir</p>
-          <div class="p-meta">
-            <span><b>Ask team</b>Plot size</span>
-            <span><b>Ask team</b>Price</span>
-            <span><b>Ask team</b>Possession</span>
-          </div>
-          <div class="p-row">
-            <strong>Premium location</strong>
-            <a href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20I%27m%20interested%20in%20the%20Residential%20Plot%20listing." target="_blank" rel="noopener">Enquire →</a>
-          </div>
-        </div>
-      </article>
+    <p class="tag-label">
+      New Metro City · Kharian – Sarai Alamgir
+    </p>
 
-      <article class="p-card" data-purpose="rent" data-type="apartment" data-location="nmc">
-        <div class="img-wrap">
-          <img src="assets/houses.jpeg" alt="Residential living space" loading="lazy">
-          <span class="p-status">For Rent</span>
-        </div>
-        <div class="p-body">
-          <h3>Apartment / Living Space</h3>
-          <p class="loc">Prime residential community</p>
-          <div class="p-meta">
-            <span><b>Ask team</b>Size</span>
-            <span><b>Ask team</b>Rent</span>
-            <span><b>Ask team</b>Availability</span>
-          </div>
-          <div class="p-row">
-            <strong>Contact for availability</strong>
-            <a href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20I%27m%20interested%20in%20the%20Apartment%20listing." target="_blank" rel="noopener">Enquire →</a>
-          </div>
-        </div>
-      </article>
+    <h1>
+      Your dream property starts<br>
+      with <em>one smart decision.</em>
+    </h1>
 
-      <article class="p-card" data-purpose="sale" data-type="plot" data-location="nmc">
-        <div class="img-wrap">
-          <img src="assets/entrance-aerial.jpg" alt="New Metro City project overview" loading="lazy">
-          <span class="p-status">Investment</span>
-        </div>
-        <div class="p-body">
-          <h3>Investment Plot Opportunities</h3>
-          <p class="loc">New Metro City Kharian – Sarai Alamgir</p>
-          <div class="p-meta">
-            <span><b>Ask team</b>Blocks</span>
-            <span><b>Ask team</b>Price</span>
-            <span><b>Ask team</b>Plan</span>
-          </div>
-          <div class="p-row">
-            <strong>Ask for current inventory</strong>
-            <a href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20I%27m%20interested%20in%20investment%20plots." target="_blank" rel="noopener">Details →</a>
-          </div>
-        </div>
-      </article>
-    </div>
-    <p class="property-filter-msg" id="noResults">No listings match those filters yet — message us on WhatsApp and we'll match you with current inventory.</p>
-  </section>
+    <p class="lede">
+      Amir Realty helps you buy, sell, rent and invest in New Metro City
+      Kharian – Sarai Alamgir with clear guidance from search to possession.
+    </p>
 
-  <!-- NEW METRO CITY PROJECT -->
-  <section id="new-metro-city" class="section dark-panel">
-    <div class="section-head reveal">
-      <div>
-        <p class="tag-label">Featured Project</p>
-        <h2>New Metro City</h2>
-      </div>
-      <p class="lede">Kharian – Sarai Alamgir. A planned community with landmark architecture, wide boulevards and residential blocks.</p>
-    </div>
+    <div class="hero-actions">
 
-    <div class="project-feature reveal">
-      <div class="project-media">
-        <img src="assets/entrance-aerial.jpg" alt="Aerial view of New Metro City development" loading="lazy">
-      </div>
-      <div class="project-copy">
-        <img class="nmc-logo" src="assets/new-metro-city-logo.png" alt="New Metro City logo">
-        <h3>A community designed for modern living.</h3>
-        <p>New Metro City Kharian – Sarai Alamgir brings together residential blocks, landmark public spaces and planned infrastructure. Speak with Amir Realty for current inventory, pricing, payment plans and site visits.</p>
-        <div class="chip-row">
-          <span>Residential</span><span>Commercial</span><span>Investment</span><span>Landmarks</span><span>Planned Community</span>
-        </div>
-        <a class="btn btn-gold" href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20please%20send%20me%20New%20Metro%20City%20project%20details." target="_blank" rel="noopener">Request Project Details</a>
-      </div>
-    </div>
+      <a class="btn btn-gold" href="#properties">
+        Explore Properties
+      </a>
 
-    <div style="height:56px"></div>
-
-    <div class="section-head reveal">
-      <div>
-        <p class="tag-label">Landmarks</p>
-        <h2 style="font-size:32px">Around New Metro City</h2>
-      </div>
-      <p class="lede">Tap an image for a closer look. Landmark names follow the project's own signage and materials.</p>
-    </div>
-    <div class="landmark-grid reveal">
-      <div class="landmark l1" data-full="assets/clock-tower.webp" data-cap="Clock Tower">
-        <img src="assets/clock-tower.webp" alt="New Metro City Clock Tower" loading="lazy">
-        <span class="cap">Clock Tower</span>
-      </div>
-      <div class="landmark l2" data-full="assets/entrance-gate-photo.jpg" data-cap="Entrance Gate">
-        <img src="assets/entrance-gate-photo.jpg" alt="New Metro City entrance gate" loading="lazy">
-        <span class="cap">Entrance Gate</span>
-      </div>
-      <div class="landmark l3" data-full="assets/bilal-masjid.jpg" data-cap="Bilal Masjid">
-        <img src="assets/bilal-masjid.jpg" alt="Bilal Masjid" loading="lazy">
-        <span class="cap">Bilal Masjid</span>
-      </div>
-      <div class="landmark l4" data-full="assets/eiffel-enclave.jpg" data-cap="Eiffel Enclave">
-        <img src="assets/eiffel-enclave.jpg" alt="Eiffel Enclave replica landmark" loading="lazy">
-        <span class="cap">Eiffel Enclave</span>
-      </div>
-      <div class="landmark l5" data-full="assets/trafalgar-square.jpg" data-cap="Trafalgar Square – Momentum">
-        <img src="assets/trafalgar-square.jpg" alt="Trafalgar Square – Momentum landmark" loading="lazy">
-        <span class="cap">Trafalgar Square – Momentum</span>
-      </div>
-      <div class="landmark l6" data-full="assets/zyad-square.jpg" data-cap="Zyad Square">
-        <img src="assets/zyad-square.jpg" alt="Zyad Square landmark" loading="lazy">
-        <span class="cap">Zyad Square</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- VIDEO EXPERIENCE -->
-  <section id="experience" class="section">
-    <div class="section-head reveal">
-      <div>
-        <p class="tag-label">New Metro City Experience</p>
-        <h2>See it before you visit</h2>
-      </div>
-      <p class="lede">A short walk through the entrance, the clock tower and the surrounding environment. Tap any clip to play.</p>
-    </div>
-    <div class="video-row reveal">
-
-      <div class="video-card" data-video="assets/entrance-gate.mp4">
-        <video playsinline muted loop preload="none" poster="assets/entrance-gate-video-poster.jpg"></video>
-        <button class="play-btn" aria-label="Play entrance gate video">
-          <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg>
-        </button>
-        <button class="mute-btn" aria-label="Toggle sound">
-          <svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 5V4L8 9H4zM17 8a5 5 0 010 8v-8z"/></svg>
-        </button>
-        <div class="v-overlay"><span class="v-title">Entrance Gate</span></div>
-      </div>
-
-      <div class="video-card" data-video="assets/clock-tower.mp4">
-        <video playsinline muted loop preload="none" poster="assets/clock-tower-poster.jpg"></video>
-        <button class="play-btn" aria-label="Play clock tower video">
-          <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg>
-        </button>
-        <button class="mute-btn" aria-label="Toggle sound">
-          <svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 5V4L8 9H4zM17 8a5 5 0 010 8v-8z"/></svg>
-        </button>
-        <div class="v-overlay"><span class="v-title">Clock Tower</span></div>
-      </div>
-
-      <div class="video-card" data-video="assets/environment.mp4">
-        <video playsinline muted loop preload="none" poster="assets/environment-poster.jpg"></video>
-        <button class="play-btn" aria-label="Play environment video">
-          <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg>
-        </button>
-        <button class="mute-btn" aria-label="Toggle sound">
-          <svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 5V4L8 9H4zM17 8a5 5 0 010 8v-8z"/></svg>
-        </button>
-        <div class="v-overlay"><span class="v-title">Environment</span></div>
-      </div>
+      <a
+        class="btn btn-glass"
+        href="https://wa.me/923086262091?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details."
+        target="_blank"
+        rel="noopener"
+      >
+        Talk on WhatsApp
+      </a>
 
     </div>
-  </section>
 
-  <!-- INVESTMENT -->
-  <section class="section dark-panel">
-    <div class="investment">
-      <div class="reveal">
-        <p class="tag-label">Investment With Clarity</p>
-        <h2>Invest today.<br>Build tomorrow.</h2>
-        <p class="lede">Good property decisions start with the right information. Amir Realty helps you compare opportunities, understand New Metro City's blocks and move forward with confidence.</p>
-        <a class="btn btn-gold" href="#contact">Speak to an Advisor</a>
-      </div>
-      <div class="stats reveal">
-        <div class="stat"><b>01</b><span>Property Search</span></div>
-        <div class="stat"><b>02</b><span>Deal Guidance</span></div>
-        <div class="stat"><b>03</b><span>Investment Support</span></div>
-        <div class="stat"><b>04</b><span>After-Sale Care</span></div>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <!-- EXPLORE / MAP -->
-  <section id="explore" class="section">
-    <div class="section-head reveal">
-      <div>
-        <p class="tag-label">Explore New Metro City</p>
-        <h2>An interactive map is on its way</h2>
-      </div>
-      <p class="lede">This panel is built so a zoomable, clickable masterplan can be dropped in later — block boundaries, landmarks and live property status included.</p>
-    </div>
-    <div class="explore-panel reveal">
-      <div class="map-shell">
-        <div class="map-grid-lines" aria-hidden="true"></div>
-        <div class="map-badge"><span class="dot"></span> Interactive map — coming soon</div>
-        <div class="map-center-note">
-          <h4>Masterplan view</h4>
-          <p>Once added, you'll be able to zoom into blocks, tap landmarks like the Clock Tower and Entrance Gate, and see live plot status right here.</p>
-        </div>
-        <div class="map-zoom">
-          <button aria-label="Zoom in" disabled>+</button>
-          <button aria-label="Zoom out" disabled>–</button>
-        </div>
-      </div>
-      <div class="explore-side">
+
+  <div class="hero-visual reveal">
+
+    <div class="hero-frame">
+
+      <!-- CORRECT FILE: PNG -->
+      <img
+        src="assets/entrance-gate-photo.png"
+        alt="New Metro City entrance gate"
+        width="918"
+        height="1152"
+        loading="eager"
+      >
+
+      <div class="hero-chip">
+
         <div>
-          <h4>Block selector</h4>
-          <div class="block-chips">
-            <span>Block A</span><span>Block B</span><span>Block C</span><span>Commercial</span>
-          </div>
-        </div>
-        <div>
-          <h4>Landmarks</h4>
-          <div class="block-chips">
-            <span>Clock Tower</span><span>Entrance Gate</span><span>Bilal Masjid</span>
-          </div>
-        </div>
-        <div>
-          <h4>Legend</h4>
-          <div style="display:grid;gap:10px">
-            <div class="legend-item"><span class="swatch gold"></span> Available</div>
-            <div class="legend-item"><span class="swatch emerald"></span> Reserved</div>
-            <div class="legend-item"><span class="swatch grey"></span> Sold</div>
-          </div>
-        </div>
-        <a class="btn btn-glass btn-sm" href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20I%27d%20like%20current%20block%20availability." target="_blank" rel="noopener">Ask for live availability</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section dark-panel">
-    <div class="about">
-      <div class="about-panel reveal">
-        <img src="assets/amir-realty-logo.png" alt="Amir Realty logo">
-      </div>
-      <div class="reveal">
-        <p class="tag-label">About Amir Realty</p>
-        <h2>Your trusted property partner.</h2>
-        <p class="lede">We connect buyers, sellers, renters and investors with real estate opportunities in New Metro City Kharian – Sarai Alamgir through a straightforward, professional process.</p>
-        <div class="values">
-          <div class="v"><b>01</b><span>Clear communication at every step, in plain language</span></div>
-          <div class="v"><b>02</b><span>Property-focused guidance rather than pressure to buy</span></div>
-          <div class="v"><b>03</b><span>Long-term relationships built on follow-through after the deal</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+          <strong>Main Entrance</strong>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section contact">
-    <div class="reveal">
-      <p class="tag-label">Let's Talk Property</p>
-      <h2>Tell us what<br>you're looking for.</h2>
-      <p class="lede">Call or WhatsApp Amir Realty for current property options, prices and availability in New Metro City Kharian – Sarai Alamgir.</p>
-      <a class="phone-link" href="tel:+923086262091">0308-6262091</a>
-      <div class="contact-actions">
-        <a class="btn btn-emerald" href="https://wa.me/923086262091?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details." target="_blank" rel="noopener">Chat on WhatsApp</a>
-        <a class="btn btn-glass" href="tel:+923086262091">Call Now</a>
+          New Metro City Kharian – Sarai Alamgir
+
+        </div>
+
       </div>
+
     </div>
-    <form class="lead-form reveal" id="leadForm">
-      <input id="name" required placeholder="Your name">
-      <input id="phone" required placeholder="Phone / WhatsApp number">
-      <select id="interest" required>
-        <option value="">I'm interested in…</option>
-        <option>House for Sale</option>
-        <option>Plot for Sale</option>
-        <option>Apartment for Rent</option>
-        <option>Investment Opportunity</option>
-        <option>Other</option>
+
+    <div class="hero-ring" aria-hidden="true"></div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROPERTY FINDER
+========================================================= -->
+
+<section class="finder reveal">
+
+  <div>
+
+    <p class="tag-label">Property Finder</p>
+
+    <h2>What are you looking for?</h2>
+
+  </div>
+
+
+  <div class="finder-fields">
+
+    <div class="field">
+
+      <label for="f-purpose">Purpose</label>
+
+      <select id="f-purpose">
+
+        <option value="">Any purpose</option>
+        <option value="sale">Buy</option>
+        <option value="rent">Rent</option>
+
       </select>
-      <textarea id="message" rows="4" placeholder="Tell us your preferred block, size or budget"></textarea>
-      <button class="btn btn-gold" type="submit">Send Inquiry on WhatsApp</button>
-      <small>Your message opens in WhatsApp, addressed to Amir Realty.</small>
-    </form>
-  </section>
+
+    </div>
+
+
+    <div class="field">
+
+      <label for="f-type">Property type</label>
+
+      <select id="f-type">
+
+        <option value="">Any type</option>
+        <option value="house">House</option>
+        <option value="plot">Plot</option>
+        <option value="apartment">Apartment</option>
+        <option value="commercial">Commercial</option>
+
+      </select>
+
+    </div>
+
+
+    <div class="field">
+
+      <label for="f-location">Location</label>
+
+      <select id="f-location">
+
+        <option value="">Any location</option>
+
+        <option value="nmc">
+          New Metro City Kharian – Sarai Alamgir
+        </option>
+
+        <option value="other">Other</option>
+
+      </select>
+
+    </div>
+
+
+    <div class="field" style="justify-content:flex-end">
+
+      <label>&nbsp;</label>
+
+      <button
+        class="btn btn-gold"
+        id="findBtn"
+        type="button"
+      >
+        Search
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROPERTIES
+========================================================= -->
+
+<section id="properties" class="section">
+
+  <div class="section-head reveal">
+
+    <div>
+
+      <p class="tag-label">
+        Curated Opportunities
+      </p>
+
+      <h2>Featured properties</h2>
+
+    </div>
+
+    <p class="lede">
+      A starting selection to browse. Prices, plot sizes and availability
+      are confirmed directly with our team.
+    </p>
+
+  </div>
+
+
+  <div
+    class="property-grid reveal"
+    id="propertyGrid"
+  >
+
+
+    <!-- PROPERTY 1 -->
+
+    <article
+      class="p-card"
+      data-purpose="sale"
+      data-type="plot"
+      data-location="nmc"
+    >
+
+      <div class="img-wrap">
+
+        <img
+          src="assets/entrance-gate-photo.png"
+          alt="New Metro City entrance"
+          loading="lazy"
+        >
+
+        <span class="p-status">
+          For Sale
+        </span>
+
+      </div>
+
+
+      <div class="p-body">
+
+        <h3>Residential Plot</h3>
+
+        <p class="loc">
+          New Metro City Kharian – Sarai Alamgir
+        </p>
+
+
+        <div class="p-meta">
+
+          <span>
+            <b>Ask team</b>
+            Plot size
+          </span>
+
+          <span>
+            <b>Ask team</b>
+            Price
+          </span>
+
+          <span>
+            <b>Ask team</b>
+            Possession
+          </span>
+
+        </div>
+
+
+        <div class="p-row">
+
+          <strong>
+            Premium location
+          </strong>
+
+          <a
+            href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20I'm%20interested%20in%20the%20Residential%20Plot%20listing."
+            target="_blank"
+            rel="noopener"
+          >
+            Enquire →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- PROPERTY 2 -->
+
+    <article
+      class="p-card"
+      data-purpose="rent"
+      data-type="apartment"
+      data-location="nmc"
+    >
+
+      <div class="img-wrap">
+
+        <img
+          src="assets/houses.jpeg"
+          alt="Residential house"
+          loading="lazy"
+        >
+
+        <span class="p-status">
+          For Rent
+        </span>
+
+      </div>
+
+
+      <div class="p-body">
+
+        <h3>Apartment / Living Space</h3>
+
+        <p class="loc">
+          Prime residential community
+        </p>
+
+
+        <div class="p-meta">
+
+          <span>
+            <b>Ask team</b>
+            Size
+          </span>
+
+          <span>
+            <b>Ask team</b>
+            Rent
+          </span>
+
+          <span>
+            <b>Ask team</b>
+            Availability
+          </span>
+
+        </div>
+
+
+        <div class="p-row">
+
+          <strong>
+            Contact for availability
+          </strong>
+
+          <a
+            href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20I'm%20interested%20in%20the%20Apartment%20listing."
+            target="_blank"
+            rel="noopener"
+          >
+            Enquire →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- PROPERTY 3 -->
+
+    <article
+      class="p-card"
+      data-purpose="sale"
+      data-type="plot"
+      data-location="nmc"
+    >
+
+      <div class="img-wrap">
+
+        <img
+          src="assets/entrance-gate-photo.png"
+          alt="New Metro City investment opportunity"
+          loading="lazy"
+        >
+
+        <span class="p-status">
+          Investment
+        </span>
+
+      </div>
+
+
+      <div class="p-body">
+
+        <h3>Investment Plot Opportunities</h3>
+
+        <p class="loc">
+          New Metro City Kharian – Sarai Alamgir
+        </p>
+
+
+        <div class="p-meta">
+
+          <span>
+            <b>Ask team</b>
+            Blocks
+          </span>
+
+          <span>
+            <b>Ask team</b>
+            Price
+          </span>
+
+          <span>
+            <b>Ask team</b>
+            Plan
+          </span>
+
+        </div>
+
+
+        <div class="p-row">
+
+          <strong>
+            Ask for current inventory
+          </strong>
+
+          <a
+            href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20I'm%20interested%20in%20investment%20plots."
+            target="_blank"
+            rel="noopener"
+          >
+            Details →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+
+  <p
+    class="property-filter-msg"
+    id="noResults"
+  >
+    No listings match those filters yet — message us on WhatsApp
+    and we'll match you with current inventory.
+  </p>
+
+</section>
+
+
+<!-- =========================================================
+     NEW METRO CITY
+========================================================= -->
+
+<section
+  id="new-metro-city"
+  class="section dark-panel"
+>
+
+  <div class="section-head reveal">
+
+    <div>
+
+      <p class="tag-label">
+        Featured Project
+      </p>
+
+      <h2>New Metro City</h2>
+
+    </div>
+
+    <p class="lede">
+      Kharian – Sarai Alamgir. A planned community with landmark
+      architecture, wide boulevards and residential blocks.
+    </p>
+
+  </div>
+
+
+  <div class="project-feature reveal">
+
+    <div class="project-media">
+
+      <!-- CORRECT FILE -->
+      <img
+        src="assets/entrance-gate-photo.png"
+        alt="New Metro City entrance"
+        loading="lazy"
+      >
+
+    </div>
+
+
+    <div class="project-copy">
+
+      <img
+        class="nmc-logo"
+        src="assets/new-metro-city-logo.png"
+        alt="New Metro City logo"
+      >
+
+
+      <h3>
+        A community designed for modern living.
+      </h3>
+
+
+      <p>
+        New Metro City Kharian – Sarai Alamgir brings together
+        residential blocks, landmark public spaces and planned
+        infrastructure. Speak with Amir Realty for current inventory,
+        pricing, payment plans and site visits.
+      </p>
+
+
+      <div class="chip-row">
+
+        <span>Residential</span>
+        <span>Commercial</span>
+        <span>Investment</span>
+        <span>Landmarks</span>
+        <span>Planned Community</span>
+
+      </div>
+
+
+      <a
+        class="btn btn-gold"
+        href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20please%20send%20me%20New%20Metro%20City%20project%20details."
+        target="_blank"
+        rel="noopener"
+      >
+        Request Project Details
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div style="height:56px"></div>
+
+
+  <!-- AVAILABLE LANDMARKS ONLY -->
+
+  <div class="section-head reveal">
+
+    <div>
+
+      <p class="tag-label">
+        Project Visuals
+      </p>
+
+      <h2 style="font-size:32px">
+        New Metro City
+      </h2>
+
+    </div>
+
+    <p class="lede">
+      Explore available project visuals.
+    </p>
+
+  </div>
+
+
+  <div class="landmark-grid reveal">
+
+
+    <!-- ENTRANCE -->
+
+    <div
+      class="landmark l1"
+      data-full="assets/entrance-gate-photo.png"
+      data-cap="New Metro City Entrance Gate"
+    >
+
+      <img
+        src="assets/entrance-gate-photo.png"
+        alt="New Metro City Entrance Gate"
+        loading="lazy"
+      >
+
+      <span class="cap">
+        Entrance Gate
+      </span>
+
+    </div>
+
+
+    <!-- HOUSE -->
+
+    <div
+      class="landmark l2"
+      data-full="assets/houses.jpeg"
+      data-cap="Residential Living"
+    >
+
+      <img
+        src="assets/houses.jpeg"
+        alt="Residential living space"
+        loading="lazy"
+      >
+
+      <span class="cap">
+        Residential Living
+      </span>
+
+    </div>
+
+
+    <!-- SECOND ENTRANCE VISUAL -->
+
+    <div
+      class="landmark l3"
+      data-full="assets/entrance-gate-photo.png"
+      data-cap="New Metro City Main Entrance"
+    >
+
+      <img
+        src="assets/entrance-gate-photo.png"
+        alt="New Metro City Main Entrance"
+        loading="lazy"
+      >
+
+      <span class="cap">
+        Main Entrance
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     VIDEO EXPERIENCE
+========================================================= -->
+
+<section
+  id="experience"
+  class="section"
+>
+
+  <div class="section-head reveal">
+
+    <div>
+
+      <p class="tag-label">
+        New Metro City Experience
+      </p>
+
+      <h2>
+        See it before you visit
+      </h2>
+
+    </div>
+
+    <p class="lede">
+      Watch the available New Metro City video experience.
+    </p>
+
+  </div>
+
+
+  <div class="video-row reveal">
+
+
+    <!-- ONLY VIDEO CONFIRMED AVAILABLE -->
+
+    <div
+      class="video-card"
+      data-video="assets/environment.mp4"
+    >
+
+      <video
+        playsinline
+        muted
+        loop
+        preload="metadata"
+        src="assets/environment.mp4"
+      ></video>
+
+
+      <button
+        class="play-btn"
+        aria-label="Play environment video"
+        type="button"
+      >
+
+        <svg viewBox="0 0 24 24">
+          <path d="M6 4l14 8-14 8z"/>
+        </svg>
+
+      </button>
+
+
+      <button
+        class="mute-btn"
+        aria-label="Toggle sound"
+        type="button"
+      >
+
+        <svg viewBox="0 0 24 24">
+          <path d="M4 9v6h4l5 5V4L8 9H4zM17 8a5 5 0 010 8v-8z"/>
+        </svg>
+
+      </button>
+
+
+      <div class="v-overlay">
+
+        <span class="v-title">
+          New Metro City Experience
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     INVESTMENT
+========================================================= -->
+
+<section class="section dark-panel">
+
+  <div class="investment">
+
+
+    <div class="reveal">
+
+      <p class="tag-label">
+        Investment With Clarity
+      </p>
+
+      <h2>
+        Invest today.<br>
+        Build tomorrow.
+      </h2>
+
+      <p class="lede">
+        Good property decisions start with the right information.
+        Amir Realty helps you compare opportunities, understand
+        New Metro City's blocks and move forward with confidence.
+      </p>
+
+
+      <a
+        class="btn btn-gold"
+        href="#contact"
+      >
+        Speak to an Advisor
+      </a>
+
+    </div>
+
+
+    <div class="stats reveal">
+
+      <div class="stat">
+        <b>01</b>
+        <span>Property Search</span>
+      </div>
+
+      <div class="stat">
+        <b>02</b>
+        <span>Deal Guidance</span>
+      </div>
+
+      <div class="stat">
+        <b>03</b>
+        <span>Investment Support</span>
+      </div>
+
+      <div class="stat">
+        <b>04</b>
+        <span>After-Sale Care</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPLORE
+========================================================= -->
+
+<section
+  id="explore"
+  class="section"
+>
+
+  <div class="section-head reveal">
+
+    <div>
+
+      <p class="tag-label">
+        Explore New Metro City
+      </p>
+
+      <h2>
+        An interactive map is on its way
+      </h2>
+
+    </div>
+
+    <p class="lede">
+      This panel is built so a zoomable, clickable masterplan
+      can be added later.
+    </p>
+
+  </div>
+
+
+  <div class="explore-panel reveal">
+
+
+    <div class="map-shell">
+
+      <div
+        class="map-grid-lines"
+        aria-hidden="true"
+      ></div>
+
+
+      <div class="map-badge">
+
+        <span class="dot"></span>
+
+        Interactive map — coming soon
+
+      </div>
+
+
+      <div class="map-center-note">
+
+        <h4>
+          Masterplan view
+        </h4>
+
+        <p>
+          A future interactive masterplan can show blocks,
+          landmarks and live property status here.
+        </p>
+
+      </div>
+
+
+      <div class="map-zoom">
+
+        <button
+          aria-label="Zoom in"
+          disabled
+        >
+          +
+        </button>
+
+        <button
+          aria-label="Zoom out"
+          disabled
+        >
+          –
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="explore-side">
+
+
+      <div>
+
+        <h4>
+          Block selector
+        </h4>
+
+        <div class="block-chips">
+
+          <span>Block A</span>
+          <span>Block B</span>
+          <span>Block C</span>
+          <span>Commercial</span>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Landmarks
+        </h4>
+
+        <div class="block-chips">
+
+          <span>Entrance Gate</span>
+          <span>Residential Area</span>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Legend
+        </h4>
+
+        <div
+          style="display:grid;gap:10px"
+        >
+
+          <div class="legend-item">
+            <span class="swatch gold"></span>
+            Available
+          </div>
+
+          <div class="legend-item">
+            <span class="swatch emerald"></span>
+            Reserved
+          </div>
+
+          <div class="legend-item">
+            <span class="swatch grey"></span>
+            Sold
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <a
+        class="btn btn-glass btn-sm"
+        href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20I'd%20like%20current%20block%20availability."
+        target="_blank"
+        rel="noopener"
+      >
+        Ask for live availability
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+  id="about"
+  class="section dark-panel"
+>
+
+  <div class="about">
+
+
+    <div class="about-panel reveal">
+
+      <img
+        src="assets/amir-realty-logo.png"
+        alt="Amir Realty logo"
+        onerror="this.style.display='none'"
+      >
+
+    </div>
+
+
+    <div class="reveal">
+
+      <p class="tag-label">
+        About Amir Realty
+      </p>
+
+      <h2>
+        Your trusted property partner.
+      </h2>
+
+      <p class="lede">
+        We connect buyers, sellers, renters and investors with
+        real estate opportunities in New Metro City Kharian –
+        Sarai Alamgir through a straightforward, professional process.
+      </p>
+
+
+      <div class="values">
+
+
+        <div class="v">
+
+          <b>01</b>
+
+          <span>
+            Clear communication at every step, in plain language
+          </span>
+
+        </div>
+
+
+        <div class="v">
+
+          <b>02</b>
+
+          <span>
+            Property-focused guidance rather than pressure to buy
+          </span>
+
+        </div>
+
+
+        <div class="v">
+
+          <b>03</b>
+
+          <span>
+            Long-term relationships built on follow-through after the deal
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+  id="contact"
+  class="section contact"
+>
+
+
+  <div class="reveal">
+
+    <p class="tag-label">
+      Let's Talk Property
+    </p>
+
+    <h2>
+      Tell us what<br>
+      you're looking for.
+    </h2>
+
+    <p class="lede">
+      Call or WhatsApp Amir Realty for current property options,
+      prices and availability in New Metro City Kharian – Sarai Alamgir.
+    </p>
+
+
+    <a
+      class="phone-link"
+      href="tel:+923086262091"
+    >
+      0308-6262091
+    </a>
+
+
+    <div class="contact-actions">
+
+      <a
+        class="btn btn-emerald"
+        href="https://wa.me/923086262091?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details."
+        target="_blank"
+        rel="noopener"
+      >
+        Chat on WhatsApp
+      </a>
+
+
+      <a
+        class="btn btn-glass"
+        href="tel:+923086262091"
+      >
+        Call Now
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <form
+    class="lead-form reveal"
+    id="leadForm"
+  >
+
+    <input
+      id="name"
+      required
+      placeholder="Your name"
+    >
+
+
+    <input
+      id="phone"
+      required
+      placeholder="Phone / WhatsApp number"
+    >
+
+
+    <select
+      id="interest"
+      required
+    >
+
+      <option value="">
+        I'm interested in…
+      </option>
+
+      <option>
+        House for Sale
+      </option>
+
+      <option>
+        Plot for Sale
+      </option>
+
+      <option>
+        Apartment for Rent
+      </option>
+
+      <option>
+        Investment Opportunity
+      </option>
+
+      <option>
+        Other
+      </option>
+
+    </select>
+
+
+    <textarea
+      id="message"
+      rows="4"
+      placeholder="Tell us your preferred block, size or budget"
+    ></textarea>
+
+
+    <button
+      class="btn btn-gold"
+      type="submit"
+    >
+      Send Inquiry on WhatsApp
+    </button>
+
+
+    <small>
+      Your message opens in WhatsApp, addressed to Amir Realty.
+    </small>
+
+  </form>
+
+</section>
 
 </main>
 
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer>
+
+
   <div>
+
     <div class="footer-brand">
-      <img src="assets/amir-realty-logo.png" alt="Amir Realty">
-      <span>Amir Realty</span>
+
+      <img
+        src="assets/amir-realty-logo.png"
+        alt="Amir Realty"
+        onerror="this.style.display='none'"
+      >
+
+      <span>
+        Amir Realty
+      </span>
+
     </div>
-    <p>Your trusted property partner for New Metro City Kharian – Sarai Alamgir. Buy, sell, rent and invest with clarity.</p>
+
+
+    <p>
+      Your trusted property partner for New Metro City
+      Kharian – Sarai Alamgir. Buy, sell, rent and invest with clarity.
+    </p>
+
   </div>
+
+
   <div class="footer-col">
+
     <h5>Explore</h5>
-    <a href="#properties">Properties</a>
-    <a href="#new-metro-city">New Metro City</a>
-    <a href="#experience">Experience</a>
-    <a href="#explore">Masterplan</a>
+
+    <a href="#properties">
+      Properties
+    </a>
+
+    <a href="#new-metro-city">
+      New Metro City
+    </a>
+
+    <a href="#experience">
+      Experience
+    </a>
+
+    <a href="#explore">
+      Masterplan
+    </a>
+
   </div>
+
+
   <div class="footer-col">
+
     <h5>Contact</h5>
-    <a href="tel:+923086262091">0308-6262091</a>
-    <a href="https://wa.me/923086262091" target="_blank" rel="noopener">WhatsApp</a>
-    <a href="#contact">Send an inquiry</a>
+
+    <a href="tel:+923086262091">
+      0308-6262091
+    </a>
+
+    <a
+      href="https://wa.me/923086262091"
+      target="_blank"
+      rel="noopener"
+    >
+      WhatsApp
+    </a>
+
+    <a href="#contact">
+      Send an inquiry
+    </a>
+
   </div>
+
+
   <div class="footer-bottom">
-    <span>© <span id="year"></span> Amir Realty. All rights reserved.</span>
-    <span>New Metro City Kharian – Sarai Alamgir</span>
+
+    <span>
+      © <span id="year"></span>
+      Amir Realty. All rights reserved.
+    </span>
+
+    <span>
+      New Metro City Kharian – Sarai Alamgir
+    </span>
+
   </div>
+
 </footer>
 
-<a class="float-wa" href="https://wa.me/923086262091?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details." target="_blank" rel="noopener" aria-label="Chat with Amir Realty on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.7.8 1.8.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.5 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.7.8.2.1.4.2.4.3.1.2.1.6-.1 1.2z"/></svg>
+
+<!-- =========================================================
+     FLOATING WHATSAPP
+========================================================= -->
+
+<a
+  class="float-wa"
+  href="https://wa.me/923086262091?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details."
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with Amir Realty on WhatsApp"
+>
+
+  <svg viewBox="0 0 24 24">
+
+    <path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.7.8 1.8.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.5 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.7.8.2.1.4.2.4.3.1.2.1.6-.1 1.2z"/>
+
+  </svg>
+
 </a>
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
-  <img id="lightboxImg" src="" alt="">
-  <div class="lightbox-cap" id="lightboxCap"></div>
+
+<!-- =========================================================
+     LIGHTBOX
+========================================================= -->
+
+<div
+  class="lightbox"
+  id="lightbox"
+>
+
+  <button
+    class="lightbox-close"
+    id="lightboxClose"
+    aria-label="Close"
+  >
+    ×
+  </button>
+
+
+  <img
+    id="lightboxImg"
+    src=""
+    alt=""
+  >
+
+
+  <div
+    class="lightbox-cap"
+    id="lightboxCap"
+  ></div>
+
 </div>
 
+
+<!-- JAVASCRIPT -->
+
 <script src="script.js"></script>
+
+
+<!-- Backup video functionality -->
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const videoCards = document.querySelectorAll(".video-card");
+
+  videoCards.forEach(function (card) {
+
+    const video = card.querySelector("video");
+    const playButton = card.querySelector(".play-btn");
+    const muteButton = card.querySelector(".mute-btn");
+
+    if (!video) return;
+
+
+    /*
+      Make sure the environment video is loaded
+      even if script.js does not handle data-video.
+    */
+
+    if (!video.src) {
+
+      const videoPath = card.getAttribute("data-video");
+
+      if (videoPath) {
+        video.src = videoPath;
+        video.load();
+      }
+
+    }
+
+
+    if (playButton) {
+
+      playButton.addEventListener("click", function () {
+
+        if (video.paused) {
+
+          video.play().catch(function () {});
+
+          card.classList.add("is-playing");
+
+        } else {
+
+          video.pause();
+
+          card.classList.remove("is-playing");
+
+        }
+
+      });
+
+    }
+
+
+    if (muteButton) {
+
+      muteButton.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        video.muted = !video.muted;
+
+      });
+
+    }
+
+
+    video.addEventListener("play", function () {
+      card.classList.add("is-playing");
+    });
+
+
+    video.addEventListener("pause", function () {
+      card.classList.remove("is-playing");
+    });
+
+  });
+
+
+  /*
+    Current year
+  */
+
+  const year = document.getElementById("year");
+
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+});
+
+</script>
+
 </body>
 </html>
