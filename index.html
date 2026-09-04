@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,7 @@
 
 <title>Amir Realty | New Metro City Kharian – Sarai Alamgir</title>
 
-<meta name="description"
-content="Amir Realty – Your Trusted Property Partner at New Metro City Kharian – Sarai Alamgir. Buy, Sell & Invest with confidence.">
+<meta name="description" content="Amir Realty — Your Trusted Property Partner at New Metro City Kharian – Sarai Alamgir. Buy, Sell & Invest with confidence.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,1038 +18,1328 @@ content="Amir Realty – Your Trusted Property Partner at New Metro City Kharian
 
 <style>
 
-/* =====================================================
-   ROOT
-===================================================== */
+/* =========================================================
+   AMIR REALTY — CINEMATIC EDITION
+========================================================= */
 
-:root {
-    --green: #0a8f55;
-    --green-dark: #05633b;
-    --green-light: #19c77b;
-    --gold: #d7aa4a;
-    --dark: #07130f;
-    --dark-2: #0c2119;
-    --white: #ffffff;
-    --muted: #a9bbb4;
-    --glass: rgba(255,255,255,.07);
-    --border: rgba(255,255,255,.12);
-    --shadow: 0 25px 70px rgba(0,0,0,.35);
+:root{
+    --black:#030806;
+    --black2:#07120e;
+    --green:#087c4c;
+    --green2:#10b968;
+    --green3:#50e6a0;
+    --gold:#d6b15b;
+    --cream:#f4f0e5;
+    --white:#ffffff;
+    --muted:#9aaea5;
+    --line:rgba(255,255,255,.11);
+    --glass:rgba(255,255,255,.055);
+    --ease:cubic-bezier(.16,1,.3,1);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: "DM Sans", sans-serif;
-    background: var(--dark);
-    color: white;
-    overflow-x: hidden;
+body{
+    background:var(--black);
+    color:var(--white);
+    font-family:"DM Sans",sans-serif;
+    overflow-x:hidden;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:9997;
+    opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
 }
 
-img {
-    max-width: 100%;
-    display: block;
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
-button {
-    font-family: inherit;
+img{
+    max-width:100%;
+    display:block;
 }
 
-/* =====================================================
-   GLOBAL
-===================================================== */
-
-.container {
-    width: min(1180px, 92%);
-    margin: auto;
+button,input,textarea{
+    font:inherit;
 }
 
-.section {
-    padding: 100px 0;
-    position: relative;
+/* =========================================================
+   UTILITIES
+========================================================= */
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
 }
 
-.section-title {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(38px, 5vw, 62px);
-    line-height: 1.05;
-    margin-bottom: 18px;
+.section{
+    padding:120px 0;
+    position:relative;
 }
 
-.section-title span {
-    color: var(--green-light);
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--green3);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:18px;
 }
 
-.section-subtitle {
-    color: var(--muted);
-    max-width: 650px;
-    line-height: 1.8;
+.eyebrow::before{
+    content:"";
+    width:28px;
+    height:1px;
+    background:var(--gold);
 }
 
-.gradient-text {
-    background: linear-gradient(
-        90deg,
-        #fff,
-        #5ff5ad,
-        #d7aa4a
+.section-title{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(42px,5vw,72px);
+    line-height:.98;
+    letter-spacing:-2px;
+    font-weight:600;
+}
+
+.section-title span{
+    color:var(--green3);
+}
+
+.section-description{
+    max-width:650px;
+    color:var(--muted);
+    line-height:1.9;
+    margin-top:22px;
+}
+
+.gradient-text{
+    background:linear-gradient(
+        100deg,
+        #fff 15%,
+        #74f1b1 55%,
+        #d6b15b 100%
     );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-/* =====================================================
-   SCROLL PROGRESS
-===================================================== */
+/* =========================================================
+   PROGRESS
+========================================================= */
 
-.scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--green-light), var(--gold));
-    z-index: 9999;
+.progress{
+    position:fixed;
+    top:0;
+    left:0;
+    height:3px;
+    width:0;
+    z-index:10000;
+    background:linear-gradient(90deg,var(--green2),var(--gold));
 }
 
-/* =====================================================
+/* =========================================================
    NAVBAR
-===================================================== */
+========================================================= */
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 18px 0;
-    transition: .4s ease;
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9000;
+    padding:24px 0;
+    transition:.6s var(--ease);
 }
 
-.navbar.scrolled {
-    background: rgba(5, 18, 13, .88);
-    backdrop-filter: blur(18px);
-    box-shadow: 0 10px 35px rgba(0,0,0,.25);
-    padding: 11px 0;
+.navbar.scrolled{
+    padding:12px 0;
+    background:rgba(2,10,7,.78);
+    backdrop-filter:blur(22px);
+    border-bottom:1px solid rgba(255,255,255,.07);
 }
 
-.nav-inner {
-    width: min(1180px, 92%);
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.nav-inner{
+    width:min(1240px,94%);
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.logo {
-    width: 155px;
+.logo{
+    width:145px;
+    transition:.4s;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+.navbar.scrolled .logo{
+    width:125px;
 }
 
-.nav-links a {
-    font-size: 14px;
-    color: #d9e5df;
-    position: relative;
-    transition: .3s;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
 }
 
-.nav-links a:hover {
-    color: var(--green-light);
+.nav-links a{
+    color:#c5d1cc;
+    font-size:13px;
+    position:relative;
+    transition:.3s;
 }
 
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -7px;
-    width: 0;
-    height: 2px;
-    background: var(--green-light);
-    transition: .3s;
+.nav-links a:not(.nav-cta)::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:1px;
+    background:var(--green3);
+    transition:.35s var(--ease);
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+.nav-links a:hover{
+    color:#fff;
 }
 
-.nav-btn {
-    background: linear-gradient(135deg, var(--green), var(--green-light));
-    padding: 12px 20px;
-    border-radius: 30px;
-    font-weight: 700;
-    color: white !important;
-    box-shadow: 0 8px 25px rgba(25,199,123,.25);
+.nav-links a:hover::after{
+    width:100%;
 }
 
-.menu-btn {
-    display: none;
-    background: none;
-    border: 0;
-    color: white;
-    font-size: 28px;
+.nav-cta{
+    padding:12px 21px;
+    border-radius:40px;
+    background:linear-gradient(135deg,var(--green),var(--green2));
+    color:#fff!important;
+    box-shadow:0 8px 30px rgba(16,185,105,.18);
 }
 
-/* =====================================================
+.nav-cta:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 35px rgba(16,185,105,.3);
+}
+
+.menu{
+    display:none;
+    background:none;
+    border:0;
+    color:white;
+    font-size:27px;
+    cursor:pointer;
+}
+
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+
     background:
         linear-gradient(
             90deg,
-            rgba(3,16,11,.96) 0%,
-            rgba(3,16,11,.82) 45%,
-            rgba(3,16,11,.25) 100%
+            rgba(2,9,6,.98) 0%,
+            rgba(2,9,6,.87) 38%,
+            rgba(2,9,6,.48) 72%,
+            rgba(2,9,6,.72) 100%
         ),
-        url("assets/areil view new metro city.jpg") center/cover;
+        url("assets/areil view new metro city.jpg")
+        center/cover no-repeat;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: var(--green);
-    filter: blur(160px);
-    opacity: .18;
-    top: -150px;
-    right: -150px;
-    animation: floatGlow 8s ease-in-out infinite;
+.hero::before{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    right:-220px;
+    top:-180px;
+    background:var(--green);
+    filter:blur(170px);
+    opacity:.16;
+    animation:heroGlow 10s ease-in-out infinite alternate;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 760px;
-    padding-top: 70px;
-}
-
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    padding: 9px 15px;
-    border: 1px solid rgba(95,245,173,.3);
-    background: rgba(10,143,85,.12);
-    backdrop-filter: blur(10px);
-    border-radius: 50px;
-    color: #9effc9;
-    font-size: 13px;
-    margin-bottom: 25px;
-}
-
-.hero h1 {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(48px, 7vw, 86px);
-    line-height: .98;
-    margin-bottom: 25px;
-}
-
-.hero p {
-    color: #c4d1cb;
-    max-width: 650px;
-    line-height: 1.8;
-    font-size: 17px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 35px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 25px;
-    border-radius: 40px;
-    font-weight: 700;
-    transition: .35s;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--green), var(--green-light));
-    box-shadow: 0 12px 35px rgba(25,199,123,.28);
-}
-
-.btn-primary:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 45px rgba(25,199,123,.4);
-}
-
-.btn-outline {
-    border: 1px solid rgba(255,255,255,.2);
-    background: rgba(255,255,255,.06);
-    backdrop-filter: blur(10px);
-}
-
-.btn-outline:hover {
-    border-color: var(--green-light);
-    background: rgba(25,199,123,.1);
-}
-
-/* =====================================================
-   HERO STATS
-===================================================== */
-
-.hero-stats {
-    display: flex;
-    gap: 45px;
-    margin-top: 55px;
-}
-
-.stat strong {
-    display: block;
-    font-size: 25px;
-    color: white;
-}
-
-.stat span {
-    color: #8fa69d;
-    font-size: 13px;
-}
-
-/* =====================================================
-   PROPERTY FINDER
-===================================================== */
-
-.finder {
-    margin-top: -70px;
-    position: relative;
-    z-index: 10;
-}
-
-.finder-box {
-    background: rgba(13,34,26,.92);
-    border: 1px solid var(--border);
-    backdrop-filter: blur(20px);
-    border-radius: 24px;
-    padding: 25px;
-    box-shadow: var(--shadow);
-}
-
-.finder-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr) auto;
-    gap: 12px;
-}
-
-.finder-item {
-    padding: 15px;
-    border-radius: 14px;
-    background: rgba(255,255,255,.05);
-    border: 1px solid rgba(255,255,255,.08);
-}
-
-.finder-item small {
-    display: block;
-    color: #80988e;
-    margin-bottom: 5px;
-}
-
-.finder-item strong {
-    font-size: 14px;
-}
-
-.finder-search {
-    border: 0;
-    padding: 0 25px;
-    border-radius: 14px;
-    background: var(--green);
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.finder-search:hover {
-    background: var(--green-light);
-    transform: translateY(-2px);
-}
-
-/* =====================================================
-   SECTION HEADER
-===================================================== */
-
-.section-heading {
-    margin-bottom: 55px;
-}
-
-.eyebrow {
-    color: var(--green-light);
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 700;
-    margin-bottom: 14px;
-}
-
-/* =====================================================
-   PROPERTY CARDS
-===================================================== */
-
-.property-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.property-card {
-    position: relative;
-    min-height: 350px;
-    border-radius: 22px;
-    overflow: hidden;
-    background: #10251d;
-    border: 1px solid rgba(255,255,255,.08);
-    transition: .5s cubic-bezier(.2,.8,.2,1);
-}
-
-.property-card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(95,245,173,.4);
-    box-shadow: 0 25px 55px rgba(0,0,0,.3);
-}
-
-.property-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    inset: 0;
-    transition: .7s;
-}
-
-.property-card:hover img {
-    transform: scale(1.09);
-}
-
-.property-overlay {
-    position: absolute;
-    inset: 0;
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
     background:
         linear-gradient(
-            transparent 25%,
-            rgba(0,0,0,.9) 100%
+            0deg,
+            var(--black) 0%,
+            transparent 24%
         );
 }
 
-.property-content {
-    position: absolute;
-    bottom: 0;
-    padding: 25px;
-    z-index: 2;
+.hero-content{
+    position:relative;
+    z-index:3;
+    max-width:800px;
+    padding-top:70px;
 }
 
-.property-content small {
-    color: #9effc9;
+.hero-location{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:9px 15px;
+    border-radius:50px;
+    border:1px solid rgba(80,230,160,.25);
+    background:rgba(8,124,76,.1);
+    backdrop-filter:blur(15px);
+    color:#b9f9d9;
+    font-size:11px;
+    letter-spacing:1.5px;
+    margin-bottom:28px;
 }
 
-.property-content h3 {
-    font-size: 22px;
-    margin: 7px 0;
+.hero-location i{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--green3);
+    box-shadow:0 0 15px var(--green3);
 }
 
-.property-content p {
-    color: #bdcbc5;
-    font-size: 13px;
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(56px,8vw,105px);
+    line-height:.9;
+    letter-spacing:-4px;
+    max-width:900px;
 }
 
-/* =====================================================
-   PROJECT SHOWCASE
-===================================================== */
+.hero-description{
+    max-width:650px;
+    color:#bdcbc5;
+    line-height:1.85;
+    font-size:16px;
+    margin-top:28px;
+}
 
-.showcase {
+.hero-actions{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:15px 24px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:700;
+    transition:.45s var(--ease);
+}
+
+.btn-primary{
+    background:linear-gradient(
+        135deg,
+        var(--green),
+        var(--green2)
+    );
+    box-shadow:0 15px 40px rgba(16,185,105,.2);
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 50px rgba(16,185,105,.32);
+}
+
+.btn-ghost{
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.045);
+    backdrop-filter:blur(15px);
+}
+
+.btn-ghost:hover{
+    border-color:rgba(80,230,160,.45);
+    background:rgba(80,230,160,.08);
+    transform:translateY(-3px);
+}
+
+.hero-bottom{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    margin-top:65px;
+}
+
+.hero-stat strong{
+    display:block;
+    font-family:"Playfair Display",serif;
+    font-size:27px;
+}
+
+.hero-stat span{
+    color:#788c84;
+    font-size:11px;
+    letter-spacing:.5px;
+}
+
+.hero-scroll{
+    position:absolute;
+    right:5%;
+    bottom:35px;
+    z-index:4;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#8da39a;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    writing-mode:vertical-rl;
+}
+
+.scroll-line{
+    width:1px;
+    height:55px;
+    background:linear-gradient(
+        var(--green3),
+        transparent
+    );
+}
+
+/* =========================================================
+   FINDER
+========================================================= */
+
+.finder{
+    position:relative;
+    margin-top:-65px;
+    z-index:20;
+}
+
+.finder-box{
+    display:grid;
+    grid-template-columns:repeat(4,1fr) 170px;
+    gap:1px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(25px);
+    box-shadow:0 25px 80px rgba(0,0,0,.4);
+}
+
+.finder-item{
+    padding:23px 20px;
+    background:rgba(4,16,11,.72);
+}
+
+.finder-item small{
+    display:block;
+    color:#687c73;
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-bottom:6px;
+}
+
+.finder-item strong{
+    font-size:13px;
+}
+
+.finder-button{
+    border:0;
+    background:linear-gradient(135deg,var(--green),var(--green2));
+    color:#fff;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* =========================================================
+   PROPERTY SHOWCASE
+========================================================= */
+
+.property-grid{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:18px;
+}
+
+.property-card{
+    grid-column:span 3;
+    height:410px;
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    background:#0a1812;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.property-card.large{
+    grid-column:span 6;
+}
+
+.property-card img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1s var(--ease);
+}
+
+.property-card:hover img{
+    transform:scale(1.08);
+}
+
+.property-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            180deg,
+            transparent 25%,
+            rgba(0,0,0,.85) 100%
+        );
+}
+
+.property-number{
+    position:absolute;
+    z-index:3;
+    top:20px;
+    right:20px;
+    color:rgba(255,255,255,.5);
+    font-size:11px;
+}
+
+.property-content{
+    position:absolute;
+    z-index:3;
+    left:23px;
+    right:23px;
+    bottom:23px;
+}
+
+.property-content small{
+    color:var(--green3);
+    letter-spacing:2px;
+    font-size:9px;
+    font-weight:700;
+}
+
+.property-content h3{
+    font-family:"Playfair Display",serif;
+    font-size:28px;
+    margin:7px 0;
+}
+
+.property-content p{
+    color:#b3c1bb;
+    font-size:12px;
+    line-height:1.6;
+}
+
+.property-arrow{
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    width:40px;
+    height:40px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:4;
+    transition:.4s;
+}
+
+.property-card:hover .property-arrow{
+    background:var(--green);
+    border-color:var(--green);
+    transform:rotate(-45deg);
+}
+
+/* =========================================================
+   PROJECT
+========================================================= */
+
+.project-section{
     background:
         radial-gradient(
             circle at 85% 20%,
-            rgba(25,199,123,.12),
-            transparent 30%
+            rgba(16,185,105,.1),
+            transparent 28%
         ),
-        #081a13;
+        var(--black2);
 }
 
-.showcase-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
+.project-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:70px;
+    align-items:center;
 }
 
-.showcase-image {
-    border-radius: 28px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: var(--shadow);
+.project-visual{
+    height:600px;
+    position:relative;
+    overflow:hidden;
+    border-radius:25px;
 }
 
-.showcase-image img {
-    width: 100%;
-    height: 520px;
-    object-fit: cover;
-    transition: .7s;
+.project-visual img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1.2s var(--ease);
 }
 
-.showcase-image:hover img {
-    transform: scale(1.04);
+.project-visual:hover img{
+    transform:scale(1.04);
 }
 
-.image-badge {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    background: rgba(4,18,12,.78);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255,255,255,.13);
-    padding: 15px 18px;
-    border-radius: 15px;
+.project-visual::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(0,0,0,.75)
+        );
 }
 
-.image-badge strong {
-    display: block;
-    font-size: 20px;
+.project-caption{
+    position:absolute;
+    z-index:3;
+    left:28px;
+    bottom:28px;
 }
 
-.image-badge span {
-    color: #94aaa1;
-    font-size: 12px;
+.project-caption strong{
+    display:block;
+    font-family:"Playfair Display",serif;
+    font-size:29px;
 }
 
-.block-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 28px;
+.project-caption span{
+    color:#9aaba4;
+    font-size:12px;
 }
 
-.block-chip {
-    padding: 11px 17px;
-    border-radius: 30px;
-    background: rgba(255,255,255,.05);
-    border: 1px solid rgba(255,255,255,.1);
-    color: #d4e1db;
-    transition: .3s;
+.project-floating{
+    position:absolute;
+    z-index:4;
+    top:25px;
+    right:25px;
+    padding:12px 15px;
+    border-radius:12px;
+    background:rgba(3,10,7,.65);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.12);
+    font-size:11px;
 }
 
-.block-chip:hover {
-    background: var(--green);
-    border-color: var(--green);
-    transform: translateY(-3px);
+.blocks{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-top:32px;
 }
 
-/* =====================================================
+.block{
+    padding:11px 16px;
+    border-radius:50px;
+    border:1px solid rgba(255,255,255,.1);
+    background:rgba(255,255,255,.035);
+    color:#bdcbc5;
+    font-size:12px;
+    transition:.35s;
+}
+
+.block:hover{
+    background:var(--green);
+    border-color:var(--green);
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+/* =========================================================
+   CINEMATIC VIDEO SECTION
+========================================================= */
+
+.video-section{
+    background:#020806;
+}
+
+.video-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:30px;
+    margin-bottom:45px;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.video-card{
+    border-radius:22px;
+    overflow:hidden;
+    background:#08150f;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.5s var(--ease);
+}
+
+.video-card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(80,230,160,.25);
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+}
+
+/* PERFECT CENTERED VIDEO FRAME */
+
+.video-frame{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/10;
+    overflow:hidden;
+    background:#000;
+}
+
+.video-frame video{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:100%;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+    object-position:center center;
+    display:block;
+}
+
+/* cinematic video overlay */
+
+.video-frame::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.05),
+            rgba(0,0,0,.55)
+        );
+}
+
+.video-top{
+    position:absolute;
+    z-index:4;
+    top:15px;
+    left:15px;
+    right:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.video-tag{
+    padding:7px 10px;
+    border-radius:20px;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(12px);
+    font-size:9px;
+    letter-spacing:1.5px;
+    color:#cceee0;
+}
+
+.video-controls{
+    position:absolute;
+    z-index:5;
+    left:15px;
+    bottom:15px;
+    display:flex;
+    gap:8px;
+}
+
+.video-controls button{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    cursor:pointer;
+    backdrop-filter:blur(12px);
+    transition:.3s;
+}
+
+.video-controls button:hover{
+    background:var(--green);
+    border-color:var(--green);
+}
+
+.video-info{
+    padding:20px;
+}
+
+.video-info h3{
+    font-family:"Playfair Display",serif;
+    font-size:23px;
+}
+
+.video-info p{
+    color:#788e84;
+    font-size:12px;
+    margin-top:6px;
+}
+
+/* =========================================================
    LANDMARK SLIDER
-===================================================== */
+========================================================= */
 
-.landmarks {
-    overflow: hidden;
+.landmarks{
+    overflow:hidden;
 }
 
-.landmark-track {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 10px 3px 25px;
-    scrollbar-width: none;
+.landmark-track{
+    display:flex;
+    gap:18px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+    padding:5px 0 25px;
+    cursor:grab;
 }
 
-.landmark-track::-webkit-scrollbar {
-    display: none;
+.landmark-track:active{
+    cursor:grabbing;
 }
 
-.landmark-card {
-    flex: 0 0 300px;
-    height: 380px;
-    border-radius: 22px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
+.landmark-track::-webkit-scrollbar{
+    display:none;
 }
 
-.landmark-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .7s;
+.landmark-card{
+    flex:0 0 285px;
+    height:390px;
+    position:relative;
+    overflow:hidden;
+    border-radius:21px;
 }
 
-.landmark-card:hover img {
-    transform: scale(1.1);
+.landmark-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1s var(--ease);
 }
 
-.landmark-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        transparent 35%,
-        rgba(0,0,0,.85)
+.landmark-card:hover img{
+    transform:scale(1.1);
+}
+
+.landmark-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 25%,
+        rgba(0,0,0,.9)
     );
 }
 
-.landmark-info {
-    position: absolute;
-    z-index: 2;
-    bottom: 22px;
-    left: 22px;
+.landmark-content{
+    position:absolute;
+    z-index:3;
+    left:22px;
+    right:22px;
+    bottom:22px;
 }
 
-.landmark-info h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 25px;
+.landmark-content h3{
+    font-family:"Playfair Display",serif;
+    font-size:26px;
 }
 
-.landmark-info p {
-    color: #b6c6bf;
-    font-size: 13px;
+.landmark-content p{
+    color:#a9bab3;
+    font-size:11px;
+    margin-top:5px;
 }
 
-/* =====================================================
-   VIDEO SECTION
-===================================================== */
+/* =========================================================
+   INVESTMENT
+========================================================= */
 
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.investment{
+    padding:100px 0;
 }
 
-.video-card {
-    background: #0e241b;
-    border: 1px solid rgba(255,255,255,.08);
-    border-radius: 22px;
-    overflow: hidden;
-}
-
-.video-wrapper {
-    position: relative;
-    height: 300px;
-}
-
-.video-wrapper video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.video-controls {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    display: flex;
-    gap: 8px;
-}
-
-.video-controls button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid rgba(255,255,255,.2);
-    background: rgba(0,0,0,.55);
-    color: white;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-}
-
-.video-title {
-    padding: 20px;
-}
-
-.video-title h3 {
-    margin-bottom: 5px;
-}
-
-.video-title p {
-    color: #8fa59b;
-    font-size: 13px;
-}
-
-/* =====================================================
-   INVESTMENT CTA
-===================================================== */
-
-.investment {
-    position: relative;
-    overflow: hidden;
-}
-
-.investment-box {
-    padding: 70px;
-    border-radius: 30px;
-    position: relative;
-    overflow: hidden;
+.investment-box{
+    min-height:500px;
+    padding:65px;
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
     background:
         linear-gradient(
             120deg,
-            rgba(8,70,44,.95),
-            rgba(8,31,22,.97)
+            rgba(8,74,45,.92),
+            rgba(4,20,14,.96)
         );
-    border: 1px solid rgba(95,245,173,.2);
+    border:1px solid rgba(80,230,160,.16);
 }
 
-.investment-box::after {
-    content: "";
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: var(--green-light);
-    opacity: .12;
-    border-radius: 50%;
-    filter: blur(100px);
-    right: -100px;
-    top: -180px;
+.investment-box::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    right:-150px;
+    top:-200px;
+    border-radius:50%;
+    background:var(--green2);
+    filter:blur(120px);
+    opacity:.13;
 }
 
-.investment-box h2 {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(38px, 5vw, 65px);
-    max-width: 700px;
-    position: relative;
-    z-index: 2;
+.investment-box h2{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+    font-family:"Playfair Display",serif;
+    font-size:clamp(42px,6vw,78px);
+    line-height:.98;
+    letter-spacing:-2px;
 }
 
-.investment-box p {
-    max-width: 650px;
-    color: #bdd0c7;
-    line-height: 1.8;
-    margin: 20px 0 30px;
-    position: relative;
-    z-index: 2;
+.investment-box p{
+    position:relative;
+    z-index:2;
+    max-width:620px;
+    color:#b6c9c0;
+    line-height:1.8;
+    margin:25px 0 30px;
 }
 
-/* =====================================================
+/* =========================================================
    ABOUT
-===================================================== */
+========================================================= */
 
-.about-grid {
-    display: grid;
-    grid-template-columns: .9fr 1.1fr;
-    gap: 60px;
-    align-items: center;
+.about-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:70px;
+    align-items:center;
 }
 
-.about-card {
-    padding: 35px;
-    border-radius: 25px;
-    background: linear-gradient(
-        145deg,
-        rgba(255,255,255,.08),
-        rgba(255,255,255,.025)
-    );
-    border: 1px solid rgba(255,255,255,.1);
+.about-card{
+    min-height:400px;
+    padding:35px;
+    border-radius:25px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:end;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.02)
+        );
+    border:1px solid rgba(255,255,255,.09);
 }
 
-.about-card h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 34px;
-    margin-bottom: 15px;
+.about-card::before{
+    content:"AMIR";
+    position:absolute;
+    top:35px;
+    left:35px;
+    color:rgba(255,255,255,.025);
+    font-size:100px;
+    font-weight:700;
 }
 
-.about-card p {
-    color: #a9bbb4;
-    line-height: 1.9;
+.about-card h3{
+    font-family:"Playfair Display",serif;
+    font-size:38px;
 }
 
-/* =====================================================
+.about-card p{
+    color:var(--green3);
+    margin-top:5px;
+}
+
+/* =========================================================
    CONTACT
-===================================================== */
+========================================================= */
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+.contact{
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(16,185,105,.08),
+            transparent 25%
+        );
 }
 
-.contact-card {
-    padding: 35px;
-    border-radius: 25px;
-    background: #0c2119;
-    border: 1px solid rgba(255,255,255,.08);
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:20px;
 }
 
-.contact-item {
-    padding: 18px 0;
-    border-bottom: 1px solid rgba(255,255,255,.07);
+.contact-card{
+    padding:35px;
+    border-radius:24px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.08);
 }
 
-.contact-item:last-child {
-    border-bottom: 0;
+.contact-item{
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.07);
 }
 
-.contact-item small {
-    display: block;
-    color: #799187;
-    margin-bottom: 5px;
+.contact-item:last-child{
+    border:0;
 }
 
-.contact-item strong {
-    font-size: 17px;
+.contact-item small{
+    display:block;
+    color:#667b72;
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-bottom:6px;
 }
 
-.contact-form {
-    display: grid;
-    gap: 14px;
+.contact-item strong{
+    font-size:15px;
+}
+
+.contact-form{
+    display:grid;
+    gap:13px;
 }
 
 .contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 16px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,.1);
-    background: rgba(255,255,255,.05);
-    color: white;
-    outline: none;
-    font-family: inherit;
-}
-
-.contact-form textarea {
-    min-height: 130px;
-    resize: vertical;
+.contact-form textarea{
+    width:100%;
+    border:1px solid rgba(255,255,255,.09);
+    background:rgba(0,0,0,.2);
+    color:#fff;
+    border-radius:12px;
+    padding:16px;
+    outline:none;
+    transition:.3s;
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--green-light);
+.contact-form textarea:focus{
+    border-color:rgba(80,230,160,.45);
+    box-shadow:0 0 0 3px rgba(80,230,160,.05);
 }
 
-/* =====================================================
+.contact-form textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+/* =========================================================
    FOOTER
-===================================================== */
+========================================================= */
 
-footer {
-    padding: 45px 0;
-    border-top: 1px solid rgba(255,255,255,.08);
-    background: #04100c;
+footer{
+    padding:45px 0;
+    background:#020604;
+    border-top:1px solid rgba(255,255,255,.07);
 }
 
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+.footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
-.footer-logo {
-    width: 140px;
+.footer-logo{
+    width:130px;
 }
 
-.footer-text {
-    color: #71867d;
-    font-size: 13px;
+.footer-text{
+    color:#5f746b;
+    font-size:11px;
 }
 
-/* =====================================================
+/* =========================================================
    WHATSAPP
-===================================================== */
+========================================================= */
 
-.whatsapp {
-    position: fixed;
-    right: 22px;
-    bottom: 22px;
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    background: #25D366;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    z-index: 999;
-    box-shadow: 0 12px 35px rgba(37,211,102,.35);
-    animation: pulse 2.5s infinite;
+.whatsapp{
+    position:fixed;
+    z-index:8000;
+    right:22px;
+    bottom:22px;
+    width:57px;
+    height:57px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#25d366;
+    box-shadow:0 10px 40px rgba(37,211,102,.3);
+    transition:.4s var(--ease);
 }
 
-/* =====================================================
-   REVEAL ANIMATIONS
-===================================================== */
+.whatsapp:hover{
+    transform:scale(1.1);
+}
 
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
+.whatsapp::before{
+    content:"";
+    position:absolute;
+    inset:-7px;
+    border:1px solid rgba(37,211,102,.25);
+    border-radius:50%;
+    animation:whatsappPulse 2.2s infinite;
+}
+
+.whatsapp span{
+    font-size:23px;
+}
+
+/* =========================================================
+   REVEALS
+========================================================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(45px);
     transition:
-        opacity .8s ease,
-        transform .8s cubic-bezier(.2,.8,.2,1);
+        opacity 1s var(--ease),
+        transform 1s var(--ease);
 }
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+.reveal-left{
+    opacity:0;
+    transform:translateX(-55px);
+    transition:
+        opacity 1s var(--ease),
+        transform 1s var(--ease);
 }
 
-.reveal-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: .9s ease;
+.reveal-right{
+    opacity:0;
+    transform:translateX(55px);
+    transition:
+        opacity 1s var(--ease),
+        transform 1s var(--ease);
 }
 
-.reveal-left.active {
-    opacity: 1;
-    transform: translateX(0);
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active{
+    opacity:1;
+    transform:translate(0);
 }
 
-.reveal-right {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: .9s ease;
-}
+/* =========================================================
+   ANIMATIONS
+========================================================= */
 
-.reveal-right.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* =====================================================
-   ANIMATION KEYFRAMES
-===================================================== */
-
-@keyframes pulse {
-    0%,100% {
-        box-shadow: 0 12px 35px rgba(37,211,102,.25);
+@keyframes heroGlow{
+    from{
+        transform:translate(0,0) scale(1);
     }
-
-    50% {
-        box-shadow:
-            0 12px 35px rgba(37,211,102,.25),
-            0 0 0 12px rgba(37,211,102,.08);
+    to{
+        transform:translate(-80px,80px) scale(1.15);
     }
 }
 
-@keyframes floatGlow {
-    0%,100% {
-        transform: translate(0,0);
+@keyframes whatsappPulse{
+    0%{
+        transform:scale(.8);
+        opacity:.8;
     }
-
-    50% {
-        transform: translate(-40px,50px);
+    70%,100%{
+        transform:scale(1.35);
+        opacity:0;
     }
 }
 
-/* =====================================================
+/* =========================================================
    MOBILE
-===================================================== */
+========================================================= */
 
-@media(max-width: 900px) {
+@media(max-width:950px){
 
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        left: 4%;
-        width: 92%;
-        background: rgba(5,18,13,.97);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255,255,255,.1);
-        border-radius: 20px;
-        padding: 25px;
-        flex-direction: column;
-        align-items: flex-start;
-        transform: translateY(-20px);
-        opacity: 0;
-        pointer-events: none;
-        transition: .3s;
+    .nav-links{
+        position:fixed;
+        top:76px;
+        left:4%;
+        width:92%;
+        padding:25px;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:22px;
+        background:rgba(2,10,7,.96);
+        border:1px solid rgba(255,255,255,.1);
+        border-radius:20px;
+        backdrop-filter:blur(25px);
+        transform:translateY(-15px);
+        opacity:0;
+        pointer-events:none;
+        transition:.4s var(--ease);
     }
 
-    .nav-links.open {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
+    .nav-links.open{
+        transform:translateY(0);
+        opacity:1;
+        pointer-events:auto;
     }
 
-    .menu-btn {
-        display: block;
+    .menu{
+        display:block;
     }
 
-    .finder-grid {
-        grid-template-columns: 1fr 1fr;
+    .finder-box{
+        grid-template-columns:1fr 1fr;
     }
 
-    .property-grid {
-        grid-template-columns: 1fr 1fr;
+    .finder-button{
+        min-height:55px;
     }
 
-    .showcase-grid,
+    .project-grid,
     .about-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .contact-grid{
+        grid-template-columns:1fr;
     }
 
-    .video-grid {
-        grid-template-columns: 1fr;
+    .video-grid{
+        grid-template-columns:1fr;
     }
+
+    .property-card{
+        grid-column:span 6;
+    }
+
+    .property-card.large{
+        grid-column:span 6;
+    }
+
 }
 
-@media(max-width: 600px) {
+@media(max-width:600px){
 
-    .section {
-        padding: 75px 0;
+    .section{
+        padding:85px 0;
     }
 
-    .hero h1 {
-        font-size: 48px;
+    .hero h1{
+        font-size:52px;
+        letter-spacing:-2px;
     }
 
-    .hero-stats {
-        gap: 20px;
-        flex-wrap: wrap;
+    .hero-description{
+        font-size:14px;
     }
 
-    .finder-grid {
-        grid-template-columns: 1fr;
+    .hero-bottom{
+        gap:25px;
+        flex-wrap:wrap;
+        margin-top:45px;
     }
 
-    .property-grid {
-        grid-template-columns: 1fr;
+    .hero-scroll{
+        display:none;
     }
 
-    .showcase-image img {
-        height: 380px;
+    .finder-box{
+        grid-template-columns:1fr;
     }
 
-    .investment-box {
-        padding: 35px 25px;
+    .property-grid{
+        grid-template-columns:1fr;
     }
 
-    .footer-inner {
-        flex-direction: column;
-        text-align: center;
+    .property-card,
+    .property-card.large{
+        grid-column:span 1;
+        height:390px;
     }
+
+    .project-visual{
+        height:430px;
+    }
+
+    .video-frame{
+        aspect-ratio:16/10;
+    }
+
+    .video-frame video{
+        object-position:center center;
+    }
+
+    .investment-box{
+        padding:35px 25px;
+        min-height:430px;
+    }
+
+    .footer{
+        flex-direction:column;
+        text-align:center;
+    }
+
 }
 
 </style>
 </head>
 
-
 <body>
 
-<!-- SCROLL PROGRESS -->
-<div class="scroll-progress" id="scrollProgress"></div>
+<div class="progress" id="progress"></div>
 
 
 <!-- =====================================================
-     NAVBAR
+     NAVIGATION
 ===================================================== -->
 
 <header class="navbar" id="navbar">
@@ -1063,7 +1353,7 @@ footer {
                 alt="Amir Realty">
         </a>
 
-        <button class="menu-btn" id="menuBtn">
+        <button class="menu" id="menu">
             ☰
         </button>
 
@@ -1077,9 +1367,9 @@ footer {
             <a href="#contact">Contact</a>
 
             <a
-                class="nav-btn"
                 href="https://wa.me/923086262091"
-                target="_blank">
+                target="_blank"
+                class="nav-cta">
                 WhatsApp
             </a>
 
@@ -1100,53 +1390,56 @@ footer {
 
         <div class="hero-content reveal">
 
-            <div class="hero-badge">
-                ● NEW METRO CITY KHARIAN – SARAI ALAMGIR
+            <div class="hero-location">
+                <i></i>
+                NEW METRO CITY KHARIAN – SARAI ALAMGIR
             </div>
 
             <h1>
-                Your Dream Property
+                Where Your
                 <span class="gradient-text">
-                    Starts Here.
+                    Future
                 </span>
+                Begins.
             </h1>
 
-            <p>
-                Discover premium residential, commercial and investment
-                opportunities with Amir Realty — your trusted property
-                partner at New Metro City Kharian–Sarai Alamgir.
+            <p class="hero-description">
+                Discover premium residential, commercial and
+                investment opportunities with Amir Realty —
+                your trusted property partner at New Metro City.
             </p>
 
-            <div class="hero-buttons">
+            <div class="hero-actions">
 
                 <a
                     href="#properties"
                     class="btn btn-primary">
-                    Explore Properties →
+                    Explore Properties
+                    →
                 </a>
 
                 <a
                     href="https://wa.me/923086262091"
                     target="_blank"
-                    class="btn btn-outline">
-                    Talk to Us
+                    class="btn btn-ghost">
+                    Talk to an Advisor
                 </a>
 
             </div>
 
-            <div class="hero-stats">
+            <div class="hero-bottom">
 
-                <div class="stat">
+                <div class="hero-stat">
                     <strong>01</strong>
                     <span>Trusted Partner</span>
                 </div>
 
-                <div class="stat">
+                <div class="hero-stat">
                     <strong>24/7</strong>
                     <span>Property Assistance</span>
                 </div>
 
-                <div class="stat">
+                <div class="hero-stat">
                     <strong>100%</strong>
                     <span>Client Focused</span>
                 </div>
@@ -1155,6 +1448,11 @@ footer {
 
         </div>
 
+    </div>
+
+    <div class="hero-scroll">
+        Scroll to explore
+        <div class="scroll-line"></div>
     </div>
 
 </section>
@@ -1170,35 +1468,31 @@ footer {
 
         <div class="finder-box reveal">
 
-            <div class="finder-grid">
-
-                <div class="finder-item">
-                    <small>Location</small>
-                    <strong>New Metro City</strong>
-                </div>
-
-                <div class="finder-item">
-                    <small>Property</small>
-                    <strong>Residential</strong>
-                </div>
-
-                <div class="finder-item">
-                    <small>Plot Sizes</small>
-                    <strong>3 – 20 Marla</strong>
-                </div>
-
-                <div class="finder-item">
-                    <small>Purpose</small>
-                    <strong>Buy / Invest</strong>
-                </div>
-
-                <button
-                    class="finder-search"
-                    onclick="document.getElementById('properties').scrollIntoView()">
-                    Find Property
-                </button>
-
+            <div class="finder-item">
+                <small>Location</small>
+                <strong>New Metro City</strong>
             </div>
+
+            <div class="finder-item">
+                <small>Property Type</small>
+                <strong>Residential</strong>
+            </div>
+
+            <div class="finder-item">
+                <small>Plot Sizes</small>
+                <strong>3 – 20 Marla</strong>
+            </div>
+
+            <div class="finder-item">
+                <small>Purpose</small>
+                <strong>Buy / Invest</strong>
+            </div>
+
+            <button
+                class="finder-button"
+                onclick="document.getElementById('properties').scrollIntoView()">
+                Find Property →
+            </button>
 
         </div>
 
@@ -1215,34 +1509,37 @@ footer {
 
     <div class="container">
 
-        <div class="section-heading reveal">
+        <div class="reveal">
 
             <div class="eyebrow">
                 Premium Opportunities
             </div>
 
             <h2 class="section-title">
-                Find Your <span>Perfect Property</span>
+                Find Your
+                <span>Perfect Property.</span>
             </h2>
 
-            <p class="section-subtitle">
-                Explore carefully selected property opportunities
-                designed for living, growth and long-term investment.
+            <p class="section-description">
+                Carefully selected opportunities for living,
+                business and long-term investment.
             </p>
 
         </div>
 
 
-        <div class="property-grid">
+        <div class="property-grid" style="margin-top:50px;">
 
 
-            <div class="property-card reveal">
+            <div class="property-card large reveal">
 
                 <img
                     src="assets/houses.jpeg"
-                    alt="Residential Houses">
+                    alt="Residential Property">
 
-                <div class="property-overlay"></div>
+                <span class="property-number">
+                    01
+                </span>
 
                 <div class="property-content">
 
@@ -1251,9 +1548,13 @@ footer {
                     <h3>Dream Homes</h3>
 
                     <p>
-                        Build your future in a premium community.
+                        Build your future in a modern community.
                     </p>
 
+                </div>
+
+                <div class="property-arrow">
+                    ↗
                 </div>
 
             </div>
@@ -1265,7 +1566,9 @@ footer {
                     src="assets/eiffel-enclave.jpg"
                     alt="Eiffel Enclave">
 
-                <div class="property-overlay"></div>
+                <span class="property-number">
+                    02
+                </span>
 
                 <div class="property-content">
 
@@ -1274,9 +1577,13 @@ footer {
                     <h3>Eiffel Enclave</h3>
 
                     <p>
-                        Smart investment opportunities.
+                        Smart opportunities for future growth.
                     </p>
 
+                </div>
+
+                <div class="property-arrow">
+                    ↗
                 </div>
 
             </div>
@@ -1288,7 +1595,9 @@ footer {
                     src="assets/trafalgar-square.jpg"
                     alt="Trafalgar Square">
 
-                <div class="property-overlay"></div>
+                <span class="property-number">
+                    03
+                </span>
 
                 <div class="property-content">
 
@@ -1297,9 +1606,13 @@ footer {
                     <h3>Prime Commercial</h3>
 
                     <p>
-                        High-potential commercial locations.
+                        Strategic locations for your business.
                     </p>
 
+                </div>
+
+                <div class="property-arrow">
+                    ↗
                 </div>
 
             </div>
@@ -1311,7 +1624,9 @@ footer {
                     src="assets/zyad-square.png"
                     alt="Ziyad Square">
 
-                <div class="property-overlay"></div>
+                <span class="property-number">
+                    04
+                </span>
 
                 <div class="property-content">
 
@@ -1320,9 +1635,42 @@ footer {
                     <h3>Investment Plots</h3>
 
                     <p>
-                        Secure your position in the future.
+                        Secure your position in tomorrow's growth.
                     </p>
 
+                </div>
+
+                <div class="property-arrow">
+                    ↗
+                </div>
+
+            </div>
+
+
+            <div class="property-card large reveal">
+
+                <img
+                    src="assets/entrance-gate-photo.png"
+                    alt="New Metro City Entrance">
+
+                <span class="property-number">
+                    05
+                </span>
+
+                <div class="property-content">
+
+                    <small>COMMUNITY</small>
+
+                    <h3>A Grand Beginning</h3>
+
+                    <p>
+                        Experience the vision of New Metro City.
+                    </p>
+
+                </div>
+
+                <div class="property-arrow">
+                    ↗
                 </div>
 
             </div>
@@ -1338,35 +1686,28 @@ footer {
      PROJECT
 ===================================================== -->
 
-<section class="section showcase" id="project">
+<section class="section project-section" id="project">
 
     <div class="container">
 
-        <div class="showcase-grid">
+        <div class="project-grid">
 
-            <div class="showcase-image reveal-left">
-
-                <!--
-                =================================================
-                IMAGE CHANGE AREA
-
-                Agar tum NEW image lagana chaho to sirf
-                neeche filename change karna:
-
-                src="assets/YOUR-NEW-IMAGE.jpg"
-                =================================================
-                -->
+            <div class="project-visual reveal-left">
 
                 <img
                     src="assets/areil view new metro city.jpg"
                     alt="New Metro City Kharian Sarai Alamgir">
 
-                <div class="image-badge">
+                <div class="project-floating">
+                    KHARIAN – SARAI ALAMGIR
+                </div>
+
+                <div class="project-caption">
 
                     <strong>New Metro City</strong>
 
                     <span>
-                        Kharian – Sarai Alamgir
+                        A community built for tomorrow.
                     </span>
 
                 </div>
@@ -1381,35 +1722,236 @@ footer {
                 </div>
 
                 <h2 class="section-title">
-                    A Better Way To
-                    <span>Live & Invest.</span>
+                    Live Better.
+                    <span>Invest Smarter.</span>
                 </h2>
 
-                <p class="section-subtitle">
-                    New Metro City Kharian–Sarai Alamgir brings
-                    modern infrastructure, lifestyle destinations
-                    and investment opportunities together in one
-                    growing community.
+                <p class="section-description">
+
+                    New Metro City Kharian–Sarai Alamgir
+                    brings modern infrastructure, lifestyle
+                    destinations and investment opportunities
+                    together in one growing community.
+
                 </p>
 
+                <div class="blocks">
 
-                <div class="block-chips">
-
-                    <div class="block-chip">
+                    <div class="block">
                         Supreme Block
                     </div>
 
-                    <div class="block-chip">
+                    <div class="block">
                         Eiffel Block
                     </div>
 
-                    <div class="block-chip">
+                    <div class="block">
                         Paradise Hill
                     </div>
 
-                    <div class="block-chip">
+                    <div class="block">
                         Commercial
                     </div>
+
+                </div>
+
+                <a
+                    href="#contact"
+                    class="btn btn-primary"
+                    style="margin-top:30px;">
+                    Discover More →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CINEMATIC VIDEOS
+===================================================== -->
+
+<section class="section video-section">
+
+    <div class="container">
+
+        <div class="video-header reveal">
+
+            <div>
+
+                <div class="eyebrow">
+                    Cinematic Experience
+                </div>
+
+                <h2 class="section-title">
+                    See The
+                    <span>Vision.</span>
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+                Explore New Metro City through
+                a cinematic visual experience.
+            </p>
+
+        </div>
+
+
+        <div class="video-grid">
+
+
+            <!-- VIDEO 01 -->
+
+            <div class="video-card reveal">
+
+                <div class="video-frame">
+
+                    <video
+                        src="assets/environment.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <div class="video-top">
+
+                        <div class="video-tag">
+                            AMIR REALTY
+                        </div>
+
+                    </div>
+
+                    <div class="video-controls">
+
+                        <button class="play">
+                            ▶
+                        </button>
+
+                        <button class="mute">
+                            🔇
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="video-info">
+
+                    <h3>
+                        Community Environment
+                    </h3>
+
+                    <p>
+                        Discover the atmosphere.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 02 -->
+
+            <div class="video-card reveal">
+
+                <div class="video-frame">
+
+                    <video
+                        src="assets/clock-tower.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <div class="video-top">
+
+                        <div class="video-tag">
+                            LANDMARK
+                        </div>
+
+                    </div>
+
+                    <div class="video-controls">
+
+                        <button class="play">
+                            ▶
+                        </button>
+
+                        <button class="mute">
+                            🔇
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="video-info">
+
+                    <h3>
+                        Clock Tower
+                    </h3>
+
+                    <p>
+                        A signature destination.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 03 -->
+
+            <div class="video-card reveal">
+
+                <div class="video-frame">
+
+                    <video
+                        src="assets/entrance-gate.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <div class="video-top">
+
+                        <div class="video-tag">
+                            EXPERIENCE
+                        </div>
+
+                    </div>
+
+                    <div class="video-controls">
+
+                        <button class="play">
+                            ▶
+                        </button>
+
+                        <button class="mute">
+                            🔇
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="video-info">
+
+                    <h3>
+                        Grand Entrance
+                    </h3>
+
+                    <p>
+                        Step into the future.
+                    </p>
 
                 </div>
 
@@ -1430,26 +1972,29 @@ footer {
 
     <div class="container">
 
-        <div class="section-heading reveal">
+        <div class="reveal">
 
             <div class="eyebrow">
                 Explore The Community
             </div>
 
             <h2 class="section-title">
-                Everything Around
-                <span>You.</span>
+                More Than A
+                <span>Location.</span>
             </h2>
 
-            <p class="section-subtitle">
-                Explore some of the signature destinations
-                and landmarks of New Metro City.
+            <p class="section-description">
+                Discover the landmarks and destinations
+                that make the community special.
             </p>
 
         </div>
 
 
-        <div class="landmark-track">
+        <div
+            class="landmark-track reveal"
+            id="landmarkTrack"
+            style="margin-top:45px;">
 
 
             <div class="landmark-card">
@@ -1458,9 +2003,11 @@ footer {
                     src="assets/entrance-gate-photo.png"
                     alt="Entrance Gate">
 
-                <div class="landmark-info">
+                <div class="landmark-content">
 
-                    <h3>Entrance Gate</h3>
+                    <h3>
+                        Entrance Gate
+                    </h3>
 
                     <p>
                         A grand welcome to the community.
@@ -1477,12 +2024,14 @@ footer {
                     src="assets/clock-tower.webp.webp"
                     alt="Clock Tower">
 
-                <div class="landmark-info">
+                <div class="landmark-content">
 
-                    <h3>Clock Tower</h3>
+                    <h3>
+                        Clock Tower
+                    </h3>
 
                     <p>
-                        A landmark destination.
+                        A signature landmark.
                     </p>
 
                 </div>
@@ -1496,12 +2045,14 @@ footer {
                     src="assets/bilal-masjid.jpg"
                     alt="Bilal Masjid">
 
-                <div class="landmark-info">
+                <div class="landmark-content">
 
-                    <h3>Bilal Masjid</h3>
+                    <h3>
+                        Bilal Masjid
+                    </h3>
 
                     <p>
-                        Peaceful community environment.
+                        Peaceful community surroundings.
                     </p>
 
                 </div>
@@ -1515,12 +2066,14 @@ footer {
                     src="assets/trafalgar-square.jpg"
                     alt="Trafalgar Square">
 
-                <div class="landmark-info">
+                <div class="landmark-content">
 
-                    <h3>Trafalgar Square</h3>
+                    <h3>
+                        Trafalgar Square
+                    </h3>
 
                     <p>
-                        Lifestyle and community destination.
+                        Lifestyle destination.
                     </p>
 
                 </div>
@@ -1534,17 +2087,20 @@ footer {
                     src="assets/zyad-square.png"
                     alt="Ziyad Square">
 
-                <div class="landmark-info">
+                <div class="landmark-content">
 
-                    <h3>Ziyad Square</h3>
+                    <h3>
+                        Ziyad Square
+                    </h3>
 
                     <p>
-                        A vibrant destination.
+                        A vibrant community destination.
                     </p>
 
                 </div>
 
             </div>
+
 
         </div>
 
@@ -1554,166 +2110,21 @@ footer {
 
 
 <!-- =====================================================
-     VIDEOS
+     INVESTMENT CTA
 ===================================================== -->
 
-<section class="section" id="experience">
-
-    <div class="container">
-
-        <div class="section-heading reveal">
-
-            <div class="eyebrow">
-                Experience The Project
-            </div>
-
-            <h2 class="section-title">
-                See It. Feel It.
-                <span>Imagine It.</span>
-            </h2>
-
-        </div>
-
-
-        <div class="video-grid">
-
-
-            <div class="video-card reveal">
-
-                <div class="video-wrapper">
-
-                    <video
-                        src="assets/environment.mp4"
-                        muted
-                        loop
-                        playsinline
-                        preload="metadata">
-                    </video>
-
-                    <div class="video-controls">
-
-                        <button class="play-btn">
-                            ▶
-                        </button>
-
-                        <button class="mute-btn">
-                            🔇
-                        </button>
-
-                    </div>
-
-                </div>
-
-                <div class="video-title">
-
-                    <h3>Community Environment</h3>
-
-                    <p>
-                        Discover the surroundings.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="video-card reveal">
-
-                <div class="video-wrapper">
-
-                    <video
-                        src="assets/clock-tower.mp4"
-                        muted
-                        loop
-                        playsinline
-                        preload="metadata">
-                    </video>
-
-                    <div class="video-controls">
-
-                        <button class="play-btn">
-                            ▶
-                        </button>
-
-                        <button class="mute-btn">
-                            🔇
-                        </button>
-
-                    </div>
-
-                </div>
-
-                <div class="video-title">
-
-                    <h3>Clock Tower</h3>
-
-                    <p>
-                        One of the community landmarks.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="video-card reveal">
-
-                <div class="video-wrapper">
-
-                    <video
-                        src="assets/entrance-gate.mp4"
-                        muted
-                        loop
-                        playsinline
-                        preload="metadata">
-                    </video>
-
-                    <div class="video-controls">
-
-                        <button class="play-btn">
-                            ▶
-                        </button>
-
-                        <button class="mute-btn">
-                            🔇
-                        </button>
-
-                    </div>
-
-                </div>
-
-                <div class="video-title">
-
-                    <h3>Grand Entrance</h3>
-
-                    <p>
-                        Step into New Metro City.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     INVESTMENT
-===================================================== -->
-
-<section class="section investment">
+<section class="investment">
 
     <div class="container">
 
         <div class="investment-box reveal">
 
+            <div class="eyebrow">
+                Your Next Move
+            </div>
+
             <h2>
-                Your Next Smart
-                Investment Could Start
+                Make A Smart Move
                 <span class="gradient-text">
                     Today.
                 </span>
@@ -1722,15 +2133,15 @@ footer {
             <p>
                 Whether you're looking for your dream home,
                 a commercial opportunity or a long-term
-                investment, Amir Realty can help you make
-                the right property decision.
+                investment, Amir Realty is here to guide you.
             </p>
 
             <a
                 href="https://wa.me/923086262091"
                 target="_blank"
-                class="btn btn-primary">
-                Get Property Details →
+                class="btn btn-primary"
+                style="width:max-content;">
+                Talk To Amir Realty →
             </a>
 
         </div>
@@ -1766,7 +2177,7 @@ footer {
             <div class="reveal-right">
 
                 <div class="eyebrow">
-                    About Us
+                    About Amir Realty
                 </div>
 
                 <h2 class="section-title">
@@ -1774,11 +2185,12 @@ footer {
                     <span>Made Smarter.</span>
                 </h2>
 
-                <p class="section-subtitle">
-                    Amir Realty focuses on helping clients discover
-                    genuine property opportunities at New Metro City
-                    Kharian–Sarai Alamgir with clear guidance,
-                    professional service and a client-first approach.
+                <p class="section-description">
+                    Amir Realty focuses on helping clients
+                    discover genuine property opportunities
+                    at New Metro City Kharian–Sarai Alamgir
+                    with professional guidance, clear
+                    communication and a client-first approach.
                 </p>
 
             </div>
@@ -1794,25 +2206,25 @@ footer {
      CONTACT
 ===================================================== -->
 
-<section class="section" id="contact">
+<section class="section contact" id="contact">
 
     <div class="container">
 
-        <div class="section-heading reveal">
+        <div class="reveal">
 
             <div class="eyebrow">
                 Let's Talk
             </div>
 
             <h2 class="section-title">
-                Ready To Find
-                <span>Your Property?</span>
+                Your Property
+                <span>Journey Starts Here.</span>
             </h2>
 
         </div>
 
 
-        <div class="contact-grid">
+        <div class="contact-grid" style="margin-top:50px;">
 
 
             <div class="contact-card reveal-left">
@@ -1889,7 +2301,7 @@ footer {
                     <button
                         type="submit"
                         class="btn btn-primary">
-                        Send on WhatsApp →
+                        Send On WhatsApp →
                     </button>
 
                 </form>
@@ -1911,7 +2323,7 @@ footer {
 
     <div class="container">
 
-        <div class="footer-inner">
+        <div class="footer">
 
             <img
                 src="assets/amir-realty-logo.png"
@@ -1943,7 +2355,9 @@ footer {
     target="_blank"
     class="whatsapp"
     aria-label="WhatsApp">
-    ☎
+
+    <span>☎</span>
+
 </a>
 
 
@@ -1962,39 +2376,23 @@ document.getElementById("year").textContent =
 
 
 /* =====================================================
-   NAVBAR SCROLL
+   NAVBAR
 ===================================================== */
 
-const navbar = document.getElementById("navbar");
+const navbar =
+    document.getElementById("navbar");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",()=>{
 
-    if (window.scrollY > 50) {
+    if(window.scrollY > 50){
+
         navbar.classList.add("scrolled");
-    } else {
+
+    }else{
+
         navbar.classList.remove("scrolled");
+
     }
-
-});
-
-
-/* =====================================================
-   SCROLL PROGRESS
-===================================================== */
-
-window.addEventListener("scroll", () => {
-
-    const scrollTop = window.scrollY;
-
-    const height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-
-    const progress =
-        (scrollTop / height) * 100;
-
-    document.getElementById("scrollProgress").style.width =
-        progress + "%";
 
 });
 
@@ -2003,18 +2401,23 @@ window.addEventListener("scroll", () => {
    MOBILE MENU
 ===================================================== */
 
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+const menu =
+    document.getElementById("menu");
 
-menuBtn.addEventListener("click", () => {
+const navLinks =
+    document.getElementById("navLinks");
+
+menu.addEventListener("click",()=>{
 
     navLinks.classList.toggle("open");
 
 });
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+document
+.querySelectorAll(".nav-links a")
+.forEach(link=>{
 
-    link.addEventListener("click", () => {
+    link.addEventListener("click",()=>{
 
         navLinks.classList.remove("open");
 
@@ -2024,20 +2427,44 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 
 /* =====================================================
-   REVEAL ANIMATIONS
+   SCROLL PROGRESS
 ===================================================== */
 
-const observer =
+window.addEventListener("scroll",()=>{
+
+    const scrollTop =
+        window.scrollY;
+
+    const total =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+    const percentage =
+        (scrollTop / total) * 100;
+
+    document.getElementById("progress")
+        .style.width =
+        percentage + "%";
+
+});
+
+
+/* =====================================================
+   REVEAL ON SCROLL
+===================================================== */
+
+const revealObserver =
     new IntersectionObserver(
-        entries => {
+        entries=>{
 
-            entries.forEach(entry => {
+            entries.forEach(entry=>{
 
-                if (entry.isIntersecting) {
+                if(entry.isIntersecting){
 
                     entry.target.classList.add("active");
 
-                    observer.unobserve(entry.target);
+                    revealObserver
+                        .unobserve(entry.target);
 
                 }
 
@@ -2045,20 +2472,20 @@ const observer =
 
         },
         {
-            threshold: .12
+            threshold:.12
         }
     );
 
 
 document
-    .querySelectorAll(
-        ".reveal, .reveal-left, .reveal-right"
-    )
-    .forEach(el => {
+.querySelectorAll(
+    ".reveal,.reveal-left,.reveal-right"
+)
+.forEach(element=>{
 
-        observer.observe(el);
+    revealObserver.observe(element);
 
-    });
+});
 
 
 /* =====================================================
@@ -2066,48 +2493,103 @@ document
 ===================================================== */
 
 document
-    .querySelectorAll(".video-card")
-    .forEach(card => {
+.querySelectorAll(".video-card")
+.forEach(card=>{
 
-        const video =
-            card.querySelector("video");
+    const video =
+        card.querySelector("video");
 
-        const play =
-            card.querySelector(".play-btn");
+    const play =
+        card.querySelector(".play");
 
-        const mute =
-            card.querySelector(".mute-btn");
-
-
-        play.addEventListener("click", () => {
-
-            if (video.paused) {
-
-                video.play();
-
-                play.textContent = "❚❚";
-
-            } else {
-
-                video.pause();
-
-                play.textContent = "▶";
-
-            }
-
-        });
+    const mute =
+        card.querySelector(".mute");
 
 
-        mute.addEventListener("click", () => {
+    play.addEventListener("click",()=>{
 
-            video.muted = !video.muted;
+        if(video.paused){
 
-            mute.textContent =
-                video.muted ? "🔇" : "🔊";
+            video.play();
 
-        });
+            play.textContent="❚❚";
+
+        }else{
+
+            video.pause();
+
+            play.textContent="▶";
+
+        }
 
     });
+
+
+    mute.addEventListener("click",()=>{
+
+        video.muted =
+            !video.muted;
+
+        mute.textContent =
+            video.muted ? "🔇" : "🔊";
+
+    });
+
+});
+
+
+/* =====================================================
+   LANDMARK DRAG SCROLL
+===================================================== */
+
+const slider =
+    document.getElementById("landmarkTrack");
+
+let dragging = false;
+let startX = 0;
+let scrollStart = 0;
+
+slider.addEventListener("mousedown",e=>{
+
+    dragging = true;
+
+    startX = e.pageX -
+        slider.offsetLeft;
+
+    scrollStart =
+        slider.scrollLeft;
+
+});
+
+slider.addEventListener("mouseleave",()=>{
+
+    dragging = false;
+
+});
+
+slider.addEventListener("mouseup",()=>{
+
+    dragging = false;
+
+});
+
+slider.addEventListener("mousemove",e=>{
+
+    if(!dragging) return;
+
+    e.preventDefault();
+
+    const x =
+        e.pageX -
+        slider.offsetLeft;
+
+    const walk =
+        (x - startX) * 1.4;
+
+    slider.scrollLeft =
+        scrollStart - walk;
+
+});
 
 
 /* =====================================================
@@ -2115,22 +2597,22 @@ document
 ===================================================== */
 
 document
-    .getElementById("contactForm")
-    .addEventListener("submit", function(e) {
+.getElementById("contactForm")
+.addEventListener("submit",function(e){
 
-        e.preventDefault();
+    e.preventDefault();
 
-        const name =
-            document.getElementById("name").value;
+    const name =
+        document.getElementById("name").value;
 
-        const phone =
-            document.getElementById("phone").value;
+    const phone =
+        document.getElementById("phone").value;
 
-        const message =
-            document.getElementById("message").value;
+    const message =
+        document.getElementById("message").value;
 
 
-        const text =
+    const whatsappMessage =
 `Assalam-o-Alaikum Amir Realty,
 
 Name: ${name}
@@ -2141,54 +2623,62 @@ Property Requirement:
 ${message}`;
 
 
-        const url =
-            "https://wa.me/923086262091?text=" +
-            encodeURIComponent(text);
+    const whatsappURL =
+        "https://wa.me/923086262091?text=" +
+        encodeURIComponent(whatsappMessage);
 
 
-        window.open(url, "_blank");
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
 
-    });
+});
 
 
 /* =====================================================
-   LANDMARK AUTO SLIDER
+   AUTO PLAY VIDEOS WHEN VISIBLE
 ===================================================== */
 
-const slider =
-    document.querySelector(".landmark-track");
+const videoObserver =
+    new IntersectionObserver(
+        entries=>{
 
-let sliderSpeed = 0.6;
+            entries.forEach(entry=>{
 
-function autoSlide() {
+                const video =
+                    entry.target;
 
-    if (
-        slider &&
-        window.innerWidth > 700
-    ) {
+                if(entry.isIntersecting){
 
-        slider.scrollLeft += sliderSpeed;
+                    video.play()
+                    .catch(()=>{});
 
-        if (
-            slider.scrollLeft +
-            slider.clientWidth >=
-            slider.scrollWidth - 5
-        ) {
+                }else{
 
-            slider.scrollLeft = 0;
+                    video.pause();
 
+                }
+
+            });
+
+        },
+        {
+            threshold:.35
         }
+    );
 
-    }
 
-    requestAnimationFrame(autoSlide);
+document
+.querySelectorAll(".video-frame video")
+.forEach(video=>{
 
-}
+    videoObserver.observe(video);
 
-autoSlide();
-
+});
 
 </script>
 
 </body>
 </html>
+```
