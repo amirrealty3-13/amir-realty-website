@@ -1,2257 +1,2192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Amir Realty | New Metro City Kharian – Sarai Alamgir</title>
+<title>Amir Realty | New Metro City Kharian – Sarai Alamgir</title>
 
-  <meta
-    name="description"
-    content="Amir Realty is your trusted property partner for buying, selling, renting and investing in New Metro City Kharian – Sarai Alamgir. Talk to an advisor on WhatsApp."
-  >
+<meta name="description"
+content="Amir Realty – Your Trusted Property Partner at New Metro City Kharian – Sarai Alamgir. Buy, Sell & Invest with confidence.">
 
-  <meta name="theme-color" content="#0b0f0d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <meta property="og:type" content="website">
-  <meta
-    property="og:title"
-    content="Amir Realty | New Metro City Kharian – Sarai Alamgir"
-  >
-  <meta
-    property="og:description"
-    content="Buy, sell, rent and invest in New Metro City Kharian – Sarai Alamgir with Amir Realty."
-  >
-  <meta
-    property="og:image"
-    content="assets/entrance-gate-photo.png"
-  >
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+<style>
 
-  <link rel="stylesheet" href="style.css">
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root {
+    --green: #0a8f55;
+    --green-dark: #05633b;
+    --green-light: #19c77b;
+    --gold: #d7aa4a;
+    --dark: #07130f;
+    --dark-2: #0c2119;
+    --white: #ffffff;
+    --muted: #a9bbb4;
+    --glass: rgba(255,255,255,.07);
+    --border: rgba(255,255,255,.12);
+    --shadow: 0 25px 70px rgba(0,0,0,.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--dark);
+    color: white;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.05;
+    margin-bottom: 18px;
+}
+
+.section-title span {
+    color: var(--green-light);
+}
+
+.section-subtitle {
+    color: var(--muted);
+    max-width: 650px;
+    line-height: 1.8;
+}
+
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #fff,
+        #5ff5ad,
+        #d7aa4a
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =====================================================
+   SCROLL PROGRESS
+===================================================== */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--green-light), var(--gold));
+    z-index: 9999;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 0;
+    transition: .4s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(5, 18, 13, .88);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 10px 35px rgba(0,0,0,.25);
+    padding: 11px 0;
+}
+
+.nav-inner {
+    width: min(1180px, 92%);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 155px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: #d9e5df;
+    position: relative;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--green-light);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: var(--green-light);
+    transition: .3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-btn {
+    background: linear-gradient(135deg, var(--green), var(--green-light));
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    color: white !important;
+    box-shadow: 0 8px 25px rgba(25,199,123,.25);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 28px;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,16,11,.96) 0%,
+            rgba(3,16,11,.82) 45%,
+            rgba(3,16,11,.25) 100%
+        ),
+        url("assets/areil view new metro city.jpg") center/cover;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: var(--green);
+    filter: blur(160px);
+    opacity: .18;
+    top: -150px;
+    right: -150px;
+    animation: floatGlow 8s ease-in-out infinite;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    padding-top: 70px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 15px;
+    border: 1px solid rgba(95,245,173,.3);
+    background: rgba(10,143,85,.12);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    color: #9effc9;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 7vw, 86px);
+    line-height: .98;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    color: #c4d1cb;
+    max-width: 650px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    border-radius: 40px;
+    font-weight: 700;
+    transition: .35s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--green), var(--green-light));
+    box-shadow: 0 12px 35px rgba(25,199,123,.28);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(25,199,123,.4);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(255,255,255,.06);
+    backdrop-filter: blur(10px);
+}
+
+.btn-outline:hover {
+    border-color: var(--green-light);
+    background: rgba(25,199,123,.1);
+}
+
+/* =====================================================
+   HERO STATS
+===================================================== */
+
+.hero-stats {
+    display: flex;
+    gap: 45px;
+    margin-top: 55px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 25px;
+    color: white;
+}
+
+.stat span {
+    color: #8fa69d;
+    font-size: 13px;
+}
+
+/* =====================================================
+   PROPERTY FINDER
+===================================================== */
+
+.finder {
+    margin-top: -70px;
+    position: relative;
+    z-index: 10;
+}
+
+.finder-box {
+    background: rgba(13,34,26,.92);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+}
+
+.finder-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+    gap: 12px;
+}
+
+.finder-item {
+    padding: 15px;
+    border-radius: 14px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.finder-item small {
+    display: block;
+    color: #80988e;
+    margin-bottom: 5px;
+}
+
+.finder-item strong {
+    font-size: 14px;
+}
+
+.finder-search {
+    border: 0;
+    padding: 0 25px;
+    border-radius: 14px;
+    background: var(--green);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.finder-search:hover {
+    background: var(--green-light);
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   SECTION HEADER
+===================================================== */
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.eyebrow {
+    color: var(--green-light);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+/* =====================================================
+   PROPERTY CARDS
+===================================================== */
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.property-card {
+    position: relative;
+    min-height: 350px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #10251d;
+    border: 1px solid rgba(255,255,255,.08);
+    transition: .5s cubic-bezier(.2,.8,.2,1);
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(95,245,173,.4);
+    box-shadow: 0 25px 55px rgba(0,0,0,.3);
+}
+
+.property-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    transition: .7s;
+}
+
+.property-card:hover img {
+    transform: scale(1.09);
+}
+
+.property-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            transparent 25%,
+            rgba(0,0,0,.9) 100%
+        );
+}
+
+.property-content {
+    position: absolute;
+    bottom: 0;
+    padding: 25px;
+    z-index: 2;
+}
+
+.property-content small {
+    color: #9effc9;
+}
+
+.property-content h3 {
+    font-size: 22px;
+    margin: 7px 0;
+}
+
+.property-content p {
+    color: #bdcbc5;
+    font-size: 13px;
+}
+
+/* =====================================================
+   PROJECT SHOWCASE
+===================================================== */
+
+.showcase {
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(25,199,123,.12),
+            transparent 30%
+        ),
+        #081a13;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.showcase-image {
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+.showcase-image img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    transition: .7s;
+}
+
+.showcase-image:hover img {
+    transform: scale(1.04);
+}
+
+.image-badge {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background: rgba(4,18,12,.78);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,.13);
+    padding: 15px 18px;
+    border-radius: 15px;
+}
+
+.image-badge strong {
+    display: block;
+    font-size: 20px;
+}
+
+.image-badge span {
+    color: #94aaa1;
+    font-size: 12px;
+}
+
+.block-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.block-chip {
+    padding: 11px 17px;
+    border-radius: 30px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1);
+    color: #d4e1db;
+    transition: .3s;
+}
+
+.block-chip:hover {
+    background: var(--green);
+    border-color: var(--green);
+    transform: translateY(-3px);
+}
+
+/* =====================================================
+   LANDMARK SLIDER
+===================================================== */
+
+.landmarks {
+    overflow: hidden;
+}
+
+.landmark-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 3px 25px;
+    scrollbar-width: none;
+}
+
+.landmark-track::-webkit-scrollbar {
+    display: none;
+}
+
+.landmark-card {
+    flex: 0 0 300px;
+    height: 380px;
+    border-radius: 22px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.landmark-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .7s;
+}
+
+.landmark-card:hover img {
+    transform: scale(1.1);
+}
+
+.landmark-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 35%,
+        rgba(0,0,0,.85)
+    );
+}
+
+.landmark-info {
+    position: absolute;
+    z-index: 2;
+    bottom: 22px;
+    left: 22px;
+}
+
+.landmark-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+}
+
+.landmark-info p {
+    color: #b6c6bf;
+    font-size: 13px;
+}
+
+/* =====================================================
+   VIDEO SECTION
+===================================================== */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.video-card {
+    background: #0e241b;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.video-wrapper {
+    position: relative;
+    height: 300px;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 8px;
+}
+
+.video-controls button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(0,0,0,.55);
+    color: white;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+.video-title {
+    padding: 20px;
+}
+
+.video-title h3 {
+    margin-bottom: 5px;
+}
+
+.video-title p {
+    color: #8fa59b;
+    font-size: 13px;
+}
+
+/* =====================================================
+   INVESTMENT CTA
+===================================================== */
+
+.investment {
+    position: relative;
+    overflow: hidden;
+}
+
+.investment-box {
+    padding: 70px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            120deg,
+            rgba(8,70,44,.95),
+            rgba(8,31,22,.97)
+        );
+    border: 1px solid rgba(95,245,173,.2);
+}
+
+.investment-box::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: var(--green-light);
+    opacity: .12;
+    border-radius: 50%;
+    filter: blur(100px);
+    right: -100px;
+    top: -180px;
+}
+
+.investment-box h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 65px);
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+}
+
+.investment-box p {
+    max-width: 650px;
+    color: #bdd0c7;
+    line-height: 1.8;
+    margin: 20px 0 30px;
+    position: relative;
+    z-index: 2;
+}
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-card {
+    padding: 35px;
+    border-radius: 25px;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.025)
+    );
+    border: 1px solid rgba(255,255,255,.1);
+}
+
+.about-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #a9bbb4;
+    line-height: 1.9;
+}
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-card {
+    padding: 35px;
+    border-radius: 25px;
+    background: #0c2119;
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.contact-item {
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.contact-item:last-child {
+    border-bottom: 0;
+}
+
+.contact-item small {
+    display: block;
+    color: #799187;
+    margin-bottom: 5px;
+}
+
+.contact-item strong {
+    font-size: 17px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.1);
+    background: rgba(255,255,255,.05);
+    color: white;
+    outline: none;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--green-light);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    padding: 45px 0;
+    border-top: 1px solid rgba(255,255,255,.08);
+    background: #04100c;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    width: 140px;
+}
+
+.footer-text {
+    color: #71867d;
+    font-size: 13px;
+}
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    z-index: 999;
+    box-shadow: 0 12px 35px rgba(37,211,102,.35);
+    animation: pulse 2.5s infinite;
+}
+
+/* =====================================================
+   REVEAL ANIMATIONS
+===================================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: .9s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: .9s ease;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* =====================================================
+   ANIMATION KEYFRAMES
+===================================================== */
+
+@keyframes pulse {
+    0%,100% {
+        box-shadow: 0 12px 35px rgba(37,211,102,.25);
+    }
+
+    50% {
+        box-shadow:
+            0 12px 35px rgba(37,211,102,.25),
+            0 0 0 12px rgba(37,211,102,.08);
+    }
+}
+
+@keyframes floatGlow {
+    0%,100% {
+        transform: translate(0,0);
+    }
+
+    50% {
+        transform: translate(-40px,50px);
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width: 900px) {
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 4%;
+        width: 92%;
+        background: rgba(5,18,13,.97);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 20px;
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s;
+    }
+
+    .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .finder-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .showcase-grid,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-stats {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .finder-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-image img {
+        height: 380px;
+    }
+
+    .investment-box {
+        padding: 35px 25px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+</style>
 </head>
+
 
 <body>
 
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
 
-<header class="nav" id="siteNav">
 
-  <a class="brand" href="#home">
-    <img
-      src="assets/amir-realty-logo.png"
-      alt="Amir Realty logo"
-      onerror="this.style.display='none'"
-    >
-    <span>Amir Realty</span>
-  </a>
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
-  <button
-    class="menu-btn"
-    id="menuBtn"
-    aria-label="Toggle menu"
-    aria-expanded="false"
-    type="button"
-  >
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+<header class="navbar" id="navbar">
 
-  <nav class="nav-links" id="navLinks">
+    <div class="nav-inner">
 
-    <a href="#properties">Properties</a>
-    <a href="#new-metro-city">New Metro City</a>
-    <a href="#experience">Experience</a>
-    <a href="#explore">Explore</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+        <a href="#home">
+            <img
+                src="assets/amir-realty-logo.png"
+                class="logo"
+                alt="Amir Realty">
+        </a>
 
-    <a
-      class="btn btn-gold btn-sm nav-cta"
-      href="https://wa.me/923086262091?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details"
-      target="_blank"
-      rel="noopener"
-    >
-      Chat on WhatsApp
-    </a>
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
 
-  </nav>
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#home">Home</a>
+            <a href="#properties">Properties</a>
+            <a href="#project">New Metro City</a>
+            <a href="#landmarks">Landmarks</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+            <a
+                class="nav-btn"
+                href="https://wa.me/923086262091"
+                target="_blank">
+                WhatsApp
+            </a>
+
+        </nav>
+
+    </div>
+
 </header>
 
 
-<main id="home">
-
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
 
-<section class="hero">
+<section class="hero" id="home">
 
-  <div class="hero-copy reveal">
+    <div class="container">
 
-    <p class="tag-label">
-      New Metro City · Kharian – Sarai Alamgir
-    </p>
+        <div class="hero-content reveal">
 
-    <h1>
-      Your dream property starts<br>
-      with <em>one smart decision.</em>
-    </h1>
+            <div class="hero-badge">
+                ● NEW METRO CITY KHARIAN – SARAI ALAMGIR
+            </div>
 
-    <p class="lede">
-      Amir Realty helps you buy, sell, rent and invest in
-      New Metro City Kharian – Sarai Alamgir with clear
-      guidance from search to possession.
-    </p>
+            <h1>
+                Your Dream Property
+                <span class="gradient-text">
+                    Starts Here.
+                </span>
+            </h1>
 
-    <div class="hero-actions">
+            <p>
+                Discover premium residential, commercial and investment
+                opportunities with Amir Realty — your trusted property
+                partner at New Metro City Kharian–Sarai Alamgir.
+            </p>
 
-      <a class="btn btn-gold" href="#properties">
-        Explore Properties
-      </a>
+            <div class="hero-buttons">
 
-      <a
-        class="btn btn-glass"
-        href="https://wa.me/923086262091?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details"
-        target="_blank"
-        rel="noopener"
-      >
-        Talk on WhatsApp
-      </a>
+                <a
+                    href="#properties"
+                    class="btn btn-primary">
+                    Explore Properties →
+                </a>
 
-    </div>
+                <a
+                    href="https://wa.me/923086262091"
+                    target="_blank"
+                    class="btn btn-outline">
+                    Talk to Us
+                </a>
 
-  </div>
+            </div>
 
+            <div class="hero-stats">
 
-  <div class="hero-visual reveal">
+                <div class="stat">
+                    <strong>01</strong>
+                    <span>Trusted Partner</span>
+                </div>
 
-    <div class="hero-frame">
+                <div class="stat">
+                    <strong>24/7</strong>
+                    <span>Property Assistance</span>
+                </div>
 
-      <img
-        src="assets/entrance-gate-photo.png"
-        alt="New Metro City entrance gate"
-        width="918"
-        height="1152"
-        loading="eager"
-      >
+                <div class="stat">
+                    <strong>100%</strong>
+                    <span>Client Focused</span>
+                </div>
 
-      <div class="hero-chip">
+            </div>
 
-        <div>
-          <strong>Main Entrance</strong>
-          New Metro City Kharian – Sarai Alamgir
         </div>
 
-      </div>
-
     </div>
-
-    <div class="hero-ring" aria-hidden="true"></div>
-
-  </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      PROPERTY FINDER
-========================================================= -->
+===================================================== -->
 
-<section class="finder reveal">
+<section class="finder">
 
-  <div>
+    <div class="container">
 
-    <p class="tag-label">
-      Property Finder
-    </p>
+        <div class="finder-box reveal">
 
-    <h2>
-      What are you looking for?
-    </h2>
+            <div class="finder-grid">
 
-  </div>
+                <div class="finder-item">
+                    <small>Location</small>
+                    <strong>New Metro City</strong>
+                </div>
 
+                <div class="finder-item">
+                    <small>Property</small>
+                    <strong>Residential</strong>
+                </div>
 
-  <div class="finder-fields">
+                <div class="finder-item">
+                    <small>Plot Sizes</small>
+                    <strong>3 – 20 Marla</strong>
+                </div>
 
-    <div class="field">
+                <div class="finder-item">
+                    <small>Purpose</small>
+                    <strong>Buy / Invest</strong>
+                </div>
 
-      <label for="f-purpose">
-        Purpose
-      </label>
+                <button
+                    class="finder-search"
+                    onclick="document.getElementById('properties').scrollIntoView()">
+                    Find Property
+                </button>
 
-      <select id="f-purpose">
+            </div>
 
-        <option value="">
-          Any purpose
-        </option>
-
-        <option value="sale">
-          Buy
-        </option>
-
-        <option value="rent">
-          Rent
-        </option>
-
-      </select>
-
-    </div>
-
-
-    <div class="field">
-
-      <label for="f-type">
-        Property type
-      </label>
-
-      <select id="f-type">
-
-        <option value="">
-          Any type
-        </option>
-
-        <option value="house">
-          House
-        </option>
-
-        <option value="plot">
-          Plot
-        </option>
-
-        <option value="apartment">
-          Apartment
-        </option>
-
-        <option value="commercial">
-          Commercial
-        </option>
-
-      </select>
+        </div>
 
     </div>
-
-
-    <div class="field">
-
-      <label for="f-location">
-        Location
-      </label>
-
-      <select id="f-location">
-
-        <option value="">
-          Any location
-        </option>
-
-        <option value="nmc">
-          New Metro City Kharian – Sarai Alamgir
-        </option>
-
-        <option value="other">
-          Other
-        </option>
-
-      </select>
-
-    </div>
-
-
-    <div
-      class="field"
-      style="justify-content:flex-end"
-    >
-
-      <label>&nbsp;</label>
-
-      <button
-        class="btn btn-gold"
-        id="findBtn"
-        type="button"
-      >
-        Search
-      </button>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      PROPERTIES
-========================================================= -->
+===================================================== -->
 
-<section id="properties" class="section">
+<section class="section" id="properties">
 
-  <div class="section-head reveal">
+    <div class="container">
 
-    <div>
+        <div class="section-heading reveal">
 
-      <p class="tag-label">
-        Curated Opportunities
-      </p>
+            <div class="eyebrow">
+                Premium Opportunities
+            </div>
 
-      <h2>
-        Featured properties
-      </h2>
+            <h2 class="section-title">
+                Find Your <span>Perfect Property</span>
+            </h2>
+
+            <p class="section-subtitle">
+                Explore carefully selected property opportunities
+                designed for living, growth and long-term investment.
+            </p>
+
+        </div>
+
+
+        <div class="property-grid">
+
+
+            <div class="property-card reveal">
+
+                <img
+                    src="assets/houses.jpeg"
+                    alt="Residential Houses">
+
+                <div class="property-overlay"></div>
+
+                <div class="property-content">
+
+                    <small>RESIDENTIAL</small>
+
+                    <h3>Dream Homes</h3>
+
+                    <p>
+                        Build your future in a premium community.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="property-card reveal">
+
+                <img
+                    src="assets/eiffel-enclave.jpg"
+                    alt="Eiffel Enclave">
+
+                <div class="property-overlay"></div>
+
+                <div class="property-content">
+
+                    <small>INVESTMENT</small>
+
+                    <h3>Eiffel Enclave</h3>
+
+                    <p>
+                        Smart investment opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="property-card reveal">
+
+                <img
+                    src="assets/trafalgar-square.jpg"
+                    alt="Trafalgar Square">
+
+                <div class="property-overlay"></div>
+
+                <div class="property-content">
+
+                    <small>COMMERCIAL</small>
+
+                    <h3>Prime Commercial</h3>
+
+                    <p>
+                        High-potential commercial locations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="property-card reveal">
+
+                <img
+                    src="assets/zyad-square.png"
+                    alt="Ziyad Square">
+
+                <div class="property-overlay"></div>
+
+                <div class="property-content">
+
+                    <small>OPPORTUNITY</small>
+
+                    <h3>Investment Plots</h3>
+
+                    <p>
+                        Secure your position in the future.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
-
-    <p class="lede">
-      A starting selection to browse. Prices, plot sizes and
-      availability are confirmed directly with our team.
-    </p>
-
-  </div>
-
-
-  <div
-    class="property-grid reveal"
-    id="propertyGrid"
-  >
-
-
-    <!-- PROPERTY 1 -->
-
-    <article
-      class="p-card"
-      data-purpose="sale"
-      data-type="plot"
-      data-location="nmc"
-    >
-
-      <div class="img-wrap">
-
-        <img
-          src="assets/entrance-gate-photo.png"
-          alt="New Metro City entrance"
-          loading="lazy"
-        >
-
-        <span class="p-status">
-          For Sale
-        </span>
-
-      </div>
-
-
-      <div class="p-body">
-
-        <h3>
-          Residential Plot
-        </h3>
-
-        <p class="loc">
-          New Metro City Kharian – Sarai Alamgir
-        </p>
-
-
-        <div class="p-meta">
-
-          <span>
-            <b>Ask team</b>
-            Plot size
-          </span>
-
-          <span>
-            <b>Ask team</b>
-            Price
-          </span>
-
-          <span>
-            <b>Ask team</b>
-            Possession
-          </span>
-
-        </div>
-
-
-        <div class="p-row">
-
-          <strong>
-            Premium location
-          </strong>
-
-          <a
-            href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20I%27m%20interested%20in%20the%20Residential%20Plot%20listing."
-            target="_blank"
-            rel="noopener"
-          >
-            Enquire →
-          </a>
-
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <!-- PROPERTY 2 -->
-
-    <article
-      class="p-card"
-      data-purpose="rent"
-      data-type="apartment"
-      data-location="nmc"
-    >
-
-      <div class="img-wrap">
-
-        <img
-          src="assets/houses.jpeg"
-          alt="Residential house"
-          loading="lazy"
-        >
-
-        <span class="p-status">
-          For Rent
-        </span>
-
-      </div>
-
-
-      <div class="p-body">
-
-        <h3>
-          Apartment / Living Space
-        </h3>
-
-        <p class="loc">
-          Prime residential community
-        </p>
-
-
-        <div class="p-meta">
-
-          <span>
-            <b>Ask team</b>
-            Size
-          </span>
-
-          <span>
-            <b>Ask team</b>
-            Rent
-          </span>
-
-          <span>
-            <b>Ask team</b>
-            Availability
-          </span>
-
-        </div>
-
-
-        <div class="p-row">
-
-          <strong>
-            Contact for availability
-          </strong>
-
-          <a
-            href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20I%27m%20interested%20in%20the%20Apartment%20listing."
-            target="_blank"
-            rel="noopener"
-          >
-            Enquire →
-          </a>
-
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <!-- PROPERTY 3 -->
-
-    <article
-      class="p-card"
-      data-purpose="sale"
-      data-type="plot"
-      data-location="nmc"
-    >
-
-      <div class="img-wrap">
-
-        <img
-          src="assets/eiffel-enclave.jpg"
-          alt="Eiffel Enclave investment opportunity"
-          loading="lazy"
-        >
-
-        <span class="p-status">
-          Investment
-        </span>
-
-      </div>
-
-
-      <div class="p-body">
-
-        <h3>
-          Investment Plot Opportunities
-        </h3>
-
-        <p class="loc">
-          New Metro City Kharian – Sarai Alamgir
-        </p>
-
-
-        <div class="p-meta">
-
-          <span>
-            <b>Ask team</b>
-            Blocks
-          </span>
-
-          <span>
-            <b>Ask team</b>
-            Price
-          </span>
-
-          <span>
-            <b>Ask team</b>
-            Plan
-          </span>
-
-        </div>
-
-
-        <div class="p-row">
-
-          <strong>
-            Ask for current inventory
-          </strong>
-
-          <a
-            href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20I%27m%20interested%20in%20investment%20plots."
-            target="_blank"
-            rel="noopener"
-          >
-            Details →
-          </a>
-
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <!-- PROPERTY 4 -->
-
-    <article
-      class="p-card"
-      data-purpose="sale"
-      data-type="commercial"
-      data-location="nmc"
-    >
-
-      <div class="img-wrap">
-
-        <img
-          src="assets/trafalgar-square.jpg"
-          alt="Trafalgar Square New Metro City"
-          loading="lazy"
-        >
-
-        <span class="p-status">
-          Commercial
-        </span>
-
-      </div>
-
-
-      <div class="p-body">
-
-        <h3>
-          Commercial Opportunity
-        </h3>
-
-        <p class="loc">
-          New Metro City Kharian – Sarai Alamgir
-        </p>
-
-
-        <div class="p-meta">
-
-          <span>
-            <b>Ask team</b>
-            Size
-          </span>
-
-          <span>
-            <b>Ask team</b>
-            Price
-          </span>
-
-          <span>
-            <b>Ask team</b>
-            Location
-          </span>
-
-        </div>
-
-
-        <div class="p-row">
-
-          <strong>
-            Prime commercial location
-          </strong>
-
-          <a
-            href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20please%20send%20me%20commercial%20property%20details."
-            target="_blank"
-            rel="noopener"
-          >
-            Details →
-          </a>
-
-        </div>
-
-      </div>
-
-    </article>
-
-  </div>
-
-
-  <p
-    class="property-filter-msg"
-    id="noResults"
-  >
-    No listings match those filters yet — message us on WhatsApp
-    and we'll match you with current inventory.
-  </p>
 
 </section>
 
 
-<!-- =========================================================
-     NEW METRO CITY
-========================================================= -->
+<!-- =====================================================
+     PROJECT
+===================================================== -->
 
-<section
-  id="new-metro-city"
-  class="section dark-panel"
->
+<section class="section showcase" id="project">
 
-  <div class="section-head reveal">
+    <div class="container">
 
-    <div>
+        <div class="showcase-grid">
 
-      <p class="tag-label">
-        Featured Project
-      </p>
+            <div class="showcase-image reveal-left">
 
-      <h2>
-        New Metro City
-      </h2>
+                <!--
+                =================================================
+                IMAGE CHANGE AREA
 
-    </div>
+                Agar tum NEW image lagana chaho to sirf
+                neeche filename change karna:
 
-    <p class="lede">
-      Kharian – Sarai Alamgir. A planned community with landmark
-      architecture, wide boulevards and residential blocks.
-    </p>
+                src="assets/YOUR-NEW-IMAGE.jpg"
+                =================================================
+                -->
 
-  </div>
+                <img
+                    src="assets/areil view new metro city.jpg"
+                    alt="New Metro City Kharian Sarai Alamgir">
 
+                <div class="image-badge">
 
-  <div class="project-feature reveal">
+                    <strong>New Metro City</strong>
 
-    <div class="project-media">
+                    <span>
+                        Kharian – Sarai Alamgir
+                    </span>
 
-      <img
-        src="assets/areil view new metro city.jpg"
-        alt="Aerial view of New Metro City"
-        loading="lazy"
-      >
+                </div>
 
-    </div>
+            </div>
 
 
-    <div class="project-copy">
+            <div class="reveal-right">
 
-      <img
-        class="nmc-logo"
-        src="assets/new-metro-city-logo.png"
-        alt="New Metro City logo"
-      >
+                <div class="eyebrow">
+                    The Community
+                </div>
 
+                <h2 class="section-title">
+                    A Better Way To
+                    <span>Live & Invest.</span>
+                </h2>
 
-      <h3>
-        A community designed for modern living.
-      </h3>
-
-
-      <p>
-        New Metro City Kharian – Sarai Alamgir brings together
-        residential blocks, landmark public spaces and planned
-        infrastructure. Speak with Amir Realty for current
-        inventory, pricing, payment plans and site visits.
-      </p>
+                <p class="section-subtitle">
+                    New Metro City Kharian–Sarai Alamgir brings
+                    modern infrastructure, lifestyle destinations
+                    and investment opportunities together in one
+                    growing community.
+                </p>
 
 
-      <div class="chip-row">
+                <div class="block-chips">
 
-        <span>Residential</span>
-        <span>Commercial</span>
-        <span>Investment</span>
-        <span>Landmarks</span>
-        <span>Planned Community</span>
+                    <div class="block-chip">
+                        Supreme Block
+                    </div>
 
-      </div>
+                    <div class="block-chip">
+                        Eiffel Block
+                    </div>
 
+                    <div class="block-chip">
+                        Paradise Hill
+                    </div>
 
-      <a
-        class="btn btn-gold"
-        href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20please%20send%20me%20New%20Metro%20City%20project%20details."
-        target="_blank"
-        rel="noopener"
-      >
-        Request Project Details
-      </a>
+                    <div class="block-chip">
+                        Commercial
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
-
-  </div>
-
-
-  <div style="height:56px"></div>
-
-
-  <!-- =======================================================
-       PROJECT VISUALS
-  ======================================================= -->
-
-  <div class="section-head reveal">
-
-    <div>
-
-      <p class="tag-label">
-        Project Visuals
-      </p>
-
-      <h2 style="font-size:32px">
-        New Metro City
-      </h2>
-
-    </div>
-
-    <p class="lede">
-      Explore landmarks and available project visuals.
-    </p>
-
-  </div>
-
-
-  <div class="landmark-grid reveal">
-
-
-    <!-- AERIAL VIEW -->
-
-    <div
-      class="landmark l1"
-      data-full="assets/areil view new metro city.jpg"
-      data-cap="New Metro City Aerial View"
-    >
-
-      <img
-        src="assets/areil view new metro city.jpg"
-        alt="New Metro City aerial view"
-        loading="lazy"
-      >
-
-      <span class="cap">
-        Aerial View
-      </span>
-
-    </div>
-
-
-    <!-- BILAL MASJID -->
-
-    <div
-      class="landmark l2"
-      data-full="assets/bilal-masjid.jpg"
-      data-cap="Bilal Masjid"
-    >
-
-      <img
-        src="assets/bilal-masjid.jpg"
-        alt="Bilal Masjid"
-        loading="lazy"
-      >
-
-      <span class="cap">
-        Bilal Masjid
-      </span>
-
-    </div>
-
-
-    <!-- CLOCK TOWER -->
-
-    <div
-      class="landmark l3"
-      data-full="assets/clock-tower.webp.webp"
-      data-cap="Clock Tower"
-    >
-
-      <img
-        src="assets/clock-tower.webp.webp"
-        alt="New Metro City Clock Tower"
-        loading="lazy"
-      >
-
-      <span class="cap">
-        Clock Tower
-      </span>
-
-    </div>
-
-
-    <!-- EIFFEL ENCLAVE -->
-
-    <div
-      class="landmark l4"
-      data-full="assets/eiffel-enclave.jpg"
-      data-cap="Eiffel Enclave"
-    >
-
-      <img
-        src="assets/eiffel-enclave.jpg"
-        alt="Eiffel Enclave"
-        loading="lazy"
-      >
-
-      <span class="cap">
-        Eiffel Enclave
-      </span>
-
-    </div>
-
-
-    <!-- ENTRANCE -->
-
-    <div
-      class="landmark l5"
-      data-full="assets/entrance-gate-photo.png"
-      data-cap="New Metro City Entrance Gate"
-    >
-
-      <img
-        src="assets/entrance-gate-photo.png"
-        alt="New Metro City entrance gate"
-        loading="lazy"
-      >
-
-      <span class="cap">
-        Entrance Gate
-      </span>
-
-    </div>
-
-
-    <!-- TRAFALGAR -->
-
-    <div
-      class="landmark l6"
-      data-full="assets/trafalgar-square.jpg"
-      data-cap="Trafalgar Square"
-    >
-
-      <img
-        src="assets/trafalgar-square.jpg"
-        alt="Trafalgar Square"
-        loading="lazy"
-      >
-
-      <span class="cap">
-        Trafalgar Square
-      </span>
-
-    </div>
-
-
-    <!-- ZIYAD SQUARE -->
-
-    <div
-      class="landmark l7"
-      data-full="assets/zyad-square.png"
-      data-cap="Ziyad Square"
-    >
-
-      <img
-        src="assets/zyad-square.png"
-        alt="Ziyad Square"
-        loading="lazy"
-      >
-
-      <span class="cap">
-        Ziyad Square
-      </span>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =========================================================
-     VIDEO EXPERIENCE
-========================================================= -->
+<!-- =====================================================
+     LANDMARKS
+===================================================== -->
 
-<section
-  id="experience"
-  class="section"
->
+<section class="section landmarks" id="landmarks">
 
-  <div class="section-head reveal">
+    <div class="container">
 
-    <div>
+        <div class="section-heading reveal">
 
-      <p class="tag-label">
-        New Metro City Experience
-      </p>
+            <div class="eyebrow">
+                Explore The Community
+            </div>
 
-      <h2>
-        See it before you visit
-      </h2>
+            <h2 class="section-title">
+                Everything Around
+                <span>You.</span>
+            </h2>
 
-    </div>
+            <p class="section-subtitle">
+                Explore some of the signature destinations
+                and landmarks of New Metro City.
+            </p>
 
-    <p class="lede">
-      Explore New Metro City through our available video
-      experiences.
-    </p>
-
-  </div>
+        </div>
 
 
-  <div class="video-row reveal">
+        <div class="landmark-track">
 
 
-    <!-- ENVIRONMENT VIDEO -->
+            <div class="landmark-card">
 
-    <div
-      class="video-card"
-      data-video="assets/environment.mp4"
-    >
+                <img
+                    src="assets/entrance-gate-photo.png"
+                    alt="Entrance Gate">
 
-      <video
-        playsinline
-        muted
-        loop
-        preload="metadata"
-        src="assets/environment.mp4"
-      ></video>
+                <div class="landmark-info">
 
+                    <h3>Entrance Gate</h3>
 
-      <button
-        class="play-btn"
-        aria-label="Play environment video"
-        type="button"
-      >
+                    <p>
+                        A grand welcome to the community.
+                    </p>
 
-        <svg viewBox="0 0 24 24">
-          <path d="M6 4l14 8-14 8z"></path>
-        </svg>
+                </div>
 
-      </button>
+            </div>
 
 
-      <button
-        class="mute-btn"
-        aria-label="Toggle sound"
-        type="button"
-      >
+            <div class="landmark-card">
 
-        <svg viewBox="0 0 24 24">
-          <path d="M4 9v6h4l5 5V4L8 9H4zM17 8a5 5 0 010 8v-8z"></path>
-        </svg>
+                <img
+                    src="assets/clock-tower.webp.webp"
+                    alt="Clock Tower">
 
-      </button>
+                <div class="landmark-info">
 
+                    <h3>Clock Tower</h3>
 
-      <div class="v-overlay">
+                    <p>
+                        A landmark destination.
+                    </p>
 
-        <span class="v-title">
-          New Metro City Environment
-        </span>
+                </div>
 
-      </div>
-
-    </div>
+            </div>
 
 
-    <!-- CLOCK TOWER VIDEO -->
+            <div class="landmark-card">
 
-    <div
-      class="video-card"
-      data-video="assets/clock-tower.mp4"
-    >
+                <img
+                    src="assets/bilal-masjid.jpg"
+                    alt="Bilal Masjid">
 
-      <video
-        playsinline
-        muted
-        loop
-        preload="metadata"
-        src="assets/clock-tower.mp4"
-      ></video>
+                <div class="landmark-info">
 
+                    <h3>Bilal Masjid</h3>
 
-      <button
-        class="play-btn"
-        aria-label="Play clock tower video"
-        type="button"
-      >
+                    <p>
+                        Peaceful community environment.
+                    </p>
 
-        <svg viewBox="0 0 24 24">
-          <path d="M6 4l14 8-14 8z"></path>
-        </svg>
+                </div>
 
-      </button>
+            </div>
 
 
-      <button
-        class="mute-btn"
-        aria-label="Toggle sound"
-        type="button"
-      >
+            <div class="landmark-card">
 
-        <svg viewBox="0 0 24 24">
-          <path d="M4 9v6h4l5 5V4L8 9H4zM17 8a5 5 0 010 8v-8z"></path>
-        </svg>
+                <img
+                    src="assets/trafalgar-square.jpg"
+                    alt="Trafalgar Square">
 
-      </button>
+                <div class="landmark-info">
+
+                    <h3>Trafalgar Square</h3>
+
+                    <p>
+                        Lifestyle and community destination.
+                    </p>
+
+                </div>
+
+            </div>
 
 
-      <div class="v-overlay">
+            <div class="landmark-card">
 
-        <span class="v-title">
-          Clock Tower
-        </span>
+                <img
+                    src="assets/zyad-square.png"
+                    alt="Ziyad Square">
 
-      </div>
+                <div class="landmark-info">
+
+                    <h3>Ziyad Square</h3>
+
+                    <p>
+                        A vibrant destination.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
-
-
-    <!-- ENTRANCE VIDEO -->
-
-    <div
-      class="video-card"
-      data-video="assets/entrance-gate.mp4"
-    >
-
-      <video
-        playsinline
-        muted
-        loop
-        preload="metadata"
-        src="assets/entrance-gate.mp4"
-      ></video>
-
-
-      <button
-        class="play-btn"
-        aria-label="Play entrance gate video"
-        type="button"
-      >
-
-        <svg viewBox="0 0 24 24">
-          <path d="M6 4l14 8-14 8z"></path>
-        </svg>
-
-      </button>
-
-
-      <button
-        class="mute-btn"
-        aria-label="Toggle sound"
-        type="button"
-      >
-
-        <svg viewBox="0 0 24 24">
-          <path d="M4 9v6h4l5 5V4L8 9H4zM17 8a5 5 0 010 8v-8z"></path>
-        </svg>
-
-      </button>
-
-
-      <div class="v-overlay">
-
-        <span class="v-title">
-          New Metro City Entrance
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
+     VIDEOS
+===================================================== -->
+
+<section class="section" id="experience">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="eyebrow">
+                Experience The Project
+            </div>
+
+            <h2 class="section-title">
+                See It. Feel It.
+                <span>Imagine It.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="video-grid">
+
+
+            <div class="video-card reveal">
+
+                <div class="video-wrapper">
+
+                    <video
+                        src="assets/environment.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <div class="video-controls">
+
+                        <button class="play-btn">
+                            ▶
+                        </button>
+
+                        <button class="mute-btn">
+                            🔇
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="video-title">
+
+                    <h3>Community Environment</h3>
+
+                    <p>
+                        Discover the surroundings.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="video-card reveal">
+
+                <div class="video-wrapper">
+
+                    <video
+                        src="assets/clock-tower.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <div class="video-controls">
+
+                        <button class="play-btn">
+                            ▶
+                        </button>
+
+                        <button class="mute-btn">
+                            🔇
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="video-title">
+
+                    <h3>Clock Tower</h3>
+
+                    <p>
+                        One of the community landmarks.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="video-card reveal">
+
+                <div class="video-wrapper">
+
+                    <video
+                        src="assets/entrance-gate.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <div class="video-controls">
+
+                        <button class="play-btn">
+                            ▶
+                        </button>
+
+                        <button class="mute-btn">
+                            🔇
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="video-title">
+
+                    <h3>Grand Entrance</h3>
+
+                    <p>
+                        Step into New Metro City.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
      INVESTMENT
-========================================================= -->
+===================================================== -->
 
-<section class="section dark-panel">
+<section class="section investment">
 
-  <div class="investment">
+    <div class="container">
 
+        <div class="investment-box reveal">
 
-    <div class="reveal">
+            <h2>
+                Your Next Smart
+                Investment Could Start
+                <span class="gradient-text">
+                    Today.
+                </span>
+            </h2>
 
-      <p class="tag-label">
-        Investment With Clarity
-      </p>
+            <p>
+                Whether you're looking for your dream home,
+                a commercial opportunity or a long-term
+                investment, Amir Realty can help you make
+                the right property decision.
+            </p>
 
-      <h2>
-        Invest today.<br>
-        Build tomorrow.
-      </h2>
+            <a
+                href="https://wa.me/923086262091"
+                target="_blank"
+                class="btn btn-primary">
+                Get Property Details →
+            </a>
 
-      <p class="lede">
-        Good property decisions start with the right information.
-        Amir Realty helps you compare opportunities, understand
-        New Metro City's blocks and move forward with confidence.
-      </p>
-
-
-      <a
-        class="btn btn-gold"
-        href="#contact"
-      >
-        Speak to an Advisor
-      </a>
-
-    </div>
-
-
-    <div class="stats reveal">
-
-      <div class="stat">
-        <b>01</b>
-        <span>Property Search</span>
-      </div>
-
-      <div class="stat">
-        <b>02</b>
-        <span>Deal Guidance</span>
-      </div>
-
-      <div class="stat">
-        <b>03</b>
-        <span>Investment Support</span>
-      </div>
-
-      <div class="stat">
-        <b>04</b>
-        <span>After-Sale Care</span>
-      </div>
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
-<!-- =========================================================
-     EXPLORE
-========================================================= -->
-
-<section
-  id="explore"
-  class="section"
->
-
-  <div class="section-head reveal">
-
-    <div>
-
-      <p class="tag-label">
-        Explore New Metro City
-      </p>
-
-      <h2>
-        An interactive map is on its way
-      </h2>
-
-    </div>
-
-    <p class="lede">
-      This panel is built so a zoomable, clickable masterplan
-      can be added later.
-    </p>
-
-  </div>
-
-
-  <div class="explore-panel reveal">
-
-
-    <div class="map-shell">
-
-      <div
-        class="map-grid-lines"
-        aria-hidden="true"
-      ></div>
-
-
-      <div class="map-badge">
-
-        <span class="dot"></span>
-
-        Interactive map — coming soon
-
-      </div>
-
-
-      <div class="map-center-note">
-
-        <h4>
-          Masterplan view
-        </h4>
-
-        <p>
-          A future interactive masterplan can show blocks,
-          landmarks and live property status here.
-        </p>
-
-      </div>
-
-
-      <div class="map-zoom">
-
-        <button
-          aria-label="Zoom in"
-          disabled
-          type="button"
-        >
-          +
-        </button>
-
-        <button
-          aria-label="Zoom out"
-          disabled
-          type="button"
-        >
-          –
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <div class="explore-side">
-
-
-      <div>
-
-        <h4>
-          Block selector
-        </h4>
-
-        <div class="block-chips">
-
-          <span>Supreme Block</span>
-          <span>Eiffel Block</span>
-          <span>Paradise Hill</span>
-          <span>Commercial</span>
-
-        </div>
-
-      </div>
-
-
-      <div>
-
-        <h4>
-          Landmarks
-        </h4>
-
-        <div class="block-chips">
-
-          <span>Entrance Gate</span>
-          <span>Clock Tower</span>
-          <span>Bilal Masjid</span>
-          <span>Trafalgar Square</span>
-
-        </div>
-
-      </div>
-
-
-      <div>
-
-        <h4>
-          Legend
-        </h4>
-
-        <div
-          style="display:grid;gap:10px"
-        >
-
-          <div class="legend-item">
-            <span class="swatch gold"></span>
-            Available
-          </div>
-
-          <div class="legend-item">
-            <span class="swatch emerald"></span>
-            Reserved
-          </div>
-
-          <div class="legend-item">
-            <span class="swatch grey"></span>
-            Sold
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <a
-        class="btn btn-glass btn-sm"
-        href="https://wa.me/923086262091?text=Hi%20Amir%20Realty%2C%20I%27d%20like%20current%20block%20availability."
-        target="_blank"
-        rel="noopener"
-      >
-        Ask for live availability
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
+<!-- =====================================================
      ABOUT
-========================================================= -->
+===================================================== -->
 
-<section
-  id="about"
-  class="section dark-panel"
->
+<section class="section" id="about">
 
-  <div class="about">
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-card reveal-left">
+
+                <h3>
+                    Amir Realty
+                </h3>
+
+                <p>
+                    Your Trusted Property Partner.
+                </p>
+
+            </div>
 
 
-    <div class="about-panel reveal">
+            <div class="reveal-right">
 
-      <img
-        src="assets/amir-realty-logo.png"
-        alt="Amir Realty logo"
-        onerror="this.style.display='none'"
-      >
+                <div class="eyebrow">
+                    About Us
+                </div>
+
+                <h2 class="section-title">
+                    Property Decisions
+                    <span>Made Smarter.</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Amir Realty focuses on helping clients discover
+                    genuine property opportunities at New Metro City
+                    Kharian–Sarai Alamgir with clear guidance,
+                    professional service and a client-first approach.
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
-
-
-    <div class="reveal">
-
-      <p class="tag-label">
-        About Amir Realty
-      </p>
-
-      <h2>
-        Your trusted property partner.
-      </h2>
-
-      <p class="lede">
-        We connect buyers, sellers, renters and investors with
-        real estate opportunities in New Metro City Kharian –
-        Sarai Alamgir through a straightforward, professional process.
-      </p>
-
-
-      <div class="values">
-
-
-        <div class="v">
-
-          <b>01</b>
-
-          <span>
-            Clear communication at every step, in plain language
-          </span>
-
-        </div>
-
-
-        <div class="v">
-
-          <b>02</b>
-
-          <span>
-            Property-focused guidance rather than pressure to buy
-          </span>
-
-        </div>
-
-
-        <div class="v">
-
-          <b>03</b>
-
-          <span>
-            Long-term relationships built on follow-through after the deal
-          </span>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      CONTACT
-========================================================= -->
+===================================================== -->
 
-<section
-  id="contact"
-  class="section contact"
->
+<section class="section" id="contact">
 
+    <div class="container">
 
-  <div class="reveal">
+        <div class="section-heading reveal">
 
-    <p class="tag-label">
-      Let's Talk Property
-    </p>
+            <div class="eyebrow">
+                Let's Talk
+            </div>
 
-    <h2>
-      Tell us what<br>
-      you're looking for.
-    </h2>
+            <h2 class="section-title">
+                Ready To Find
+                <span>Your Property?</span>
+            </h2>
 
-    <p class="lede">
-      Call or WhatsApp Amir Realty for current property options,
-      prices and availability in New Metro City Kharian –
-      Sarai Alamgir.
-    </p>
+        </div>
 
 
-    <a
-      class="phone-link"
-      href="tel:+923086262091"
-    >
-      0308-6262091
-    </a>
+        <div class="contact-grid">
 
 
-    <div class="contact-actions">
+            <div class="contact-card reveal-left">
 
-      <a
-        class="btn btn-emerald"
-        href="https://wa.me/923086262091?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details"
-        target="_blank"
-        rel="noopener"
-      >
-        Chat on WhatsApp
-      </a>
+                <div class="contact-item">
+
+                    <small>Company</small>
+
+                    <strong>
+                        Amir Realty
+                    </strong>
+
+                </div>
 
 
-      <a
-        class="btn btn-glass"
-        href="tel:+923086262091"
-      >
-        Call Now
-      </a>
+                <div class="contact-item">
+
+                    <small>Project</small>
+
+                    <strong>
+                        New Metro City Kharian – Sarai Alamgir
+                    </strong>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <small>Phone / WhatsApp</small>
+
+                    <strong>
+                        0308-6262091
+                    </strong>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <small>Services</small>
+
+                    <strong>
+                        Buy • Sell • Invest
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-card reveal-right">
+
+                <form
+                    class="contact-form"
+                    id="contactForm">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Your Phone Number"
+                        required>
+
+                    <textarea
+                        id="message"
+                        placeholder="Tell us what property you're looking for..."
+                        required></textarea>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+                        Send on WhatsApp →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
 
     </div>
 
-  </div>
-
-
-  <form
-    class="lead-form reveal"
-    id="leadForm"
-  >
-
-    <input
-      id="name"
-      required
-      placeholder="Your name"
-      autocomplete="name"
-    >
-
-
-    <input
-      id="phone"
-      required
-      placeholder="Phone / WhatsApp number"
-      autocomplete="tel"
-    >
-
-
-    <select
-      id="interest"
-      required
-    >
-
-      <option value="">
-        I'm interested in…
-      </option>
-
-      <option>
-        House for Sale
-      </option>
-
-      <option>
-        Plot for Sale
-      </option>
-
-      <option>
-        Apartment for Rent
-      </option>
-
-      <option>
-        Investment Opportunity
-      </option>
-
-      <option>
-        Commercial Property
-      </option>
-
-      <option>
-        Other
-      </option>
-
-    </select>
-
-
-    <textarea
-      id="message"
-      rows="4"
-      placeholder="Tell us your preferred block, size or budget"
-    ></textarea>
-
-
-    <button
-      class="btn btn-gold"
-      type="submit"
-    >
-      Send Inquiry on WhatsApp
-    </button>
-
-
-    <small>
-      Your message opens in WhatsApp, addressed to Amir Realty.
-    </small>
-
-  </form>
-
 </section>
 
-</main>
 
-
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer>
 
+    <div class="container">
 
-  <div>
+        <div class="footer-inner">
 
-    <div class="footer-brand">
+            <img
+                src="assets/amir-realty-logo.png"
+                class="footer-logo"
+                alt="Amir Realty">
 
-      <img
-        src="assets/amir-realty-logo.png"
-        alt="Amir Realty"
-        onerror="this.style.display='none'"
-      >
+            <div class="footer-text">
+                © <span id="year"></span> Amir Realty.
+                All Rights Reserved.
+            </div>
 
-      <span>
-        Amir Realty
-      </span>
+            <div class="footer-text">
+                New Metro City Kharian – Sarai Alamgir
+            </div>
+
+        </div>
 
     </div>
-
-
-    <p>
-      Your trusted property partner for New Metro City
-      Kharian – Sarai Alamgir. Buy, sell, rent and invest with clarity.
-    </p>
-
-  </div>
-
-
-  <div class="footer-col">
-
-    <h5>
-      Explore
-    </h5>
-
-    <a href="#properties">
-      Properties
-    </a>
-
-    <a href="#new-metro-city">
-      New Metro City
-    </a>
-
-    <a href="#experience">
-      Experience
-    </a>
-
-    <a href="#explore">
-      Masterplan
-    </a>
-
-  </div>
-
-
-  <div class="footer-col">
-
-    <h5>
-      Contact
-    </h5>
-
-    <a href="tel:+923086262091">
-      0308-6262091
-    </a>
-
-    <a
-      href="https://wa.me/923086262091"
-      target="_blank"
-      rel="noopener"
-    >
-      WhatsApp
-    </a>
-
-    <a href="#contact">
-      Send an inquiry
-    </a>
-
-  </div>
-
-
-  <div class="footer-bottom">
-
-    <span>
-      © <span id="year"></span>
-      Amir Realty. All rights reserved.
-    </span>
-
-    <span>
-      New Metro City Kharian – Sarai Alamgir
-    </span>
-
-  </div>
 
 </footer>
 
 
-<!-- =========================================================
-     FLOATING WHATSAPP
-========================================================= -->
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
 
 <a
-  class="float-wa"
-  href="https://wa.me/923086262091?text=Hello%20Amir%20Realty%2C%20I%20want%20property%20details"
-  target="_blank"
-  rel="noopener"
-  aria-label="Chat with Amir Realty on WhatsApp"
->
-
-  <svg viewBox="0 0 24 24">
-
-    <path
-      d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.7.8 1.8.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.5 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.7.8.2.1.4.2.4.3.1.2.1.6-.1 1.2z"
-    ></path>
-
-  </svg>
-
+    href="https://wa.me/923086262091"
+    target="_blank"
+    class="whatsapp"
+    aria-label="WhatsApp">
+    ☎
 </a>
 
 
-<!-- =========================================================
-     LIGHTBOX
-========================================================= -->
-
-<div
-  class="lightbox"
-  id="lightbox"
->
-
-  <button
-    class="lightbox-close"
-    id="lightboxClose"
-    aria-label="Close"
-    type="button"
-  >
-    ×
-  </button>
-
-
-  <img
-    id="lightboxImg"
-    src=""
-    alt=""
-  >
-
-
-  <div
-    class="lightbox-cap"
-    id="lightboxCap"
-  ></div>
-
-</div>
-
-
-<!-- =========================================================
+<!-- =====================================================
      JAVASCRIPT
-========================================================= -->
+===================================================== -->
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+/* =====================================================
+   YEAR
+===================================================== */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 
 
-  /* =======================================================
-     CURRENT YEAR
-  ======================================================= */
+/* =====================================================
+   NAVBAR SCROLL
+===================================================== */
 
-  const year = document.getElementById("year");
+const navbar = document.getElementById("navbar");
 
-  if (year) {
-    year.textContent = new Date().getFullYear();
-  }
+window.addEventListener("scroll", () => {
 
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
 
-  /* =======================================================
-     MOBILE MENU
-  ======================================================= */
-
-  const menuBtn = document.getElementById("menuBtn");
-  const navLinks = document.getElementById("navLinks");
-
-  if (menuBtn && navLinks) {
-
-    menuBtn.addEventListener("click", function () {
-
-      const isOpen = navLinks.classList.toggle("open");
-
-      menuBtn.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
-
-    });
+});
 
 
-    navLinks.querySelectorAll("a").forEach(function (link) {
+/* =====================================================
+   SCROLL PROGRESS
+===================================================== */
 
-      link.addEventListener("click", function () {
+window.addEventListener("scroll", () => {
+
+    const scrollTop = window.scrollY;
+
+    const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+    const progress =
+        (scrollTop / height) * 100;
+
+    document.getElementById("scrollProgress").style.width =
+        progress + "%";
+
+});
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("open");
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
 
         navLinks.classList.remove("open");
 
-        menuBtn.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      });
-
     });
 
-  }
+});
 
 
-  /* =======================================================
-     PROPERTY FILTER
-  ======================================================= */
+/* =====================================================
+   REVEAL ANIMATIONS
+===================================================== */
 
-  const findBtn = document.getElementById("findBtn");
-  const propertyCards = document.querySelectorAll(".p-card");
-  const noResults = document.getElementById("noResults");
+const observer =
+    new IntersectionObserver(
+        entries => {
 
-  if (findBtn) {
+            entries.forEach(entry => {
 
-    findBtn.addEventListener("click", function () {
+                if (entry.isIntersecting) {
 
-      const purpose =
-        document.getElementById("f-purpose").value;
+                    entry.target.classList.add("active");
 
-      const type =
-        document.getElementById("f-type").value;
+                    observer.unobserve(entry.target);
 
-      const location =
-        document.getElementById("f-location").value;
+                }
 
-
-      let visibleCount = 0;
-
-
-      propertyCards.forEach(function (card) {
-
-        const cardPurpose =
-          card.getAttribute("data-purpose");
-
-        const cardType =
-          card.getAttribute("data-type");
-
-        const cardLocation =
-          card.getAttribute("data-location");
-
-
-        const purposeMatch =
-          !purpose || purpose === cardPurpose;
-
-        const typeMatch =
-          !type || type === cardType;
-
-        const locationMatch =
-          !location || location === cardLocation;
-
-
-        if (
-          purposeMatch &&
-          typeMatch &&
-          locationMatch
-        ) {
-
-          card.style.display = "";
-
-          visibleCount++;
-
-        } else {
-
-          card.style.display = "none";
-
-        }
-
-      });
-
-
-      if (noResults) {
-
-        noResults.style.display =
-          visibleCount === 0 ? "block" : "none";
-
-      }
-
-    });
-
-  }
-
-
-  /* =======================================================
-     VIDEO CONTROLS
-  ======================================================= */
-
-  const videoCards =
-    document.querySelectorAll(".video-card");
-
-
-  videoCards.forEach(function (card) {
-
-    const video =
-      card.querySelector("video");
-
-    const playButton =
-      card.querySelector(".play-btn");
-
-    const muteButton =
-      card.querySelector(".mute-btn");
-
-
-    if (!video) return;
-
-
-    if (playButton) {
-
-      playButton.addEventListener(
-        "click",
-        function () {
-
-          if (video.paused) {
-
-            video.play()
-              .then(function () {
-                card.classList.add("is-playing");
-              })
-              .catch(function () {});
-
-          } else {
-
-            video.pause();
-
-            card.classList.remove(
-              "is-playing"
-            );
-
-          }
-
-        }
-      );
-
-    }
-
-
-    if (muteButton) {
-
-      muteButton.addEventListener(
-        "click",
-        function (event) {
-
-          event.stopPropagation();
-
-          video.muted =
-            !video.muted;
-
-          muteButton.setAttribute(
-            "aria-label",
-            video.muted
-              ? "Unmute video"
-              : "Mute video"
-          );
-
-        }
-      );
-
-    }
-
-
-    video.addEventListener(
-      "play",
-      function () {
-
-        card.classList.add(
-          "is-playing"
-        );
-
-      }
-    );
-
-
-    video.addEventListener(
-      "pause",
-      function () {
-
-        card.classList.remove(
-          "is-playing"
-        );
-
-      }
-    );
-
-  });
-
-
-  /* =======================================================
-     LIGHTBOX
-  ======================================================= */
-
-  const lightbox =
-    document.getElementById("lightbox");
-
-  const lightboxImg =
-    document.getElementById("lightboxImg");
-
-  const lightboxCap =
-    document.getElementById("lightboxCap");
-
-  const lightboxClose =
-    document.getElementById("lightboxClose");
-
-
-  const landmarks =
-    document.querySelectorAll(".landmark");
-
-
-  landmarks.forEach(function (item) {
-
-    item.addEventListener(
-      "click",
-      function () {
-
-        const full =
-          item.getAttribute("data-full");
-
-        const caption =
-          item.getAttribute("data-cap");
-
-
-        if (!lightbox || !lightboxImg) {
-          return;
-        }
-
-
-        lightboxImg.src = full;
-
-        lightboxImg.alt =
-          caption || "Project visual";
-
-        if (lightboxCap) {
-          lightboxCap.textContent =
-            caption || "";
-        }
-
-
-        lightbox.classList.add(
-          "active"
-        );
-
-
-        document.body.style.overflow =
-          "hidden";
-
-      }
-    );
-
-  });
-
-
-  function closeLightbox() {
-
-    if (!lightbox) return;
-
-    lightbox.classList.remove(
-      "active"
-    );
-
-    document.body.style.overflow =
-      "";
-
-    if (lightboxImg) {
-      lightboxImg.src = "";
-    }
-
-  }
-
-
-  if (lightboxClose) {
-
-    lightboxClose.addEventListener(
-      "click",
-      closeLightbox
-    );
-
-  }
-
-
-  if (lightbox) {
-
-    lightbox.addEventListener(
-      "click",
-      function (event) {
-
-        if (
-          event.target === lightbox
-        ) {
-
-          closeLightbox();
-
-        }
-
-      }
-    );
-
-  }
-
-
-  document.addEventListener(
-    "keydown",
-    function (event) {
-
-      if (event.key === "Escape") {
-        closeLightbox();
-      }
-
-    }
-  );
-
-
-  /* =======================================================
-     CONTACT FORM → WHATSAPP
-  ======================================================= */
-
-  const leadForm =
-    document.getElementById("leadForm");
-
-
-  if (leadForm) {
-
-    leadForm.addEventListener(
-      "submit",
-      function (event) {
-
-        event.preventDefault();
-
-
-        const name =
-          document.getElementById("name").value.trim();
-
-        const phone =
-          document.getElementById("phone").value.trim();
-
-        const interest =
-          document.getElementById("interest").value;
-
-        const message =
-          document.getElementById("message").value.trim();
-
-
-        const whatsappMessage =
-          "Hello Amir Realty,%0A%0A" +
-          "Name: " +
-          encodeURIComponent(name) +
-          "%0A" +
-          "Phone: " +
-          encodeURIComponent(phone) +
-          "%0A" +
-          "Interest: " +
-          encodeURIComponent(interest) +
-          "%0A" +
-          "Details: " +
-          encodeURIComponent(
-            message || "No additional details provided."
-          );
-
-
-        const whatsappURL =
-          "https://wa.me/923086262091?text=" +
-          whatsappMessage;
-
-
-        window.open(
-          whatsappURL,
-          "_blank"
-        );
-
-      }
-    );
-
-  }
-
-
-  /* =======================================================
-     REVEAL ANIMATIONS
-  ======================================================= */
-
-  const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-  if (
-    "IntersectionObserver"
-    in window
-  ) {
-
-    const observer =
-      new IntersectionObserver(
-        function (entries) {
-
-          entries.forEach(
-            function (entry) {
-
-              if (
-                entry.isIntersecting
-              ) {
-
-                entry.target.classList.add(
-                  "visible"
-                );
-
-                observer.unobserve(
-                  entry.target
-                );
-
-              }
-
-            }
-          );
+            });
 
         },
         {
-          threshold: 0.12
+            threshold: .12
         }
-      );
-
-
-    revealElements.forEach(
-      function (element) {
-
-        observer.observe(
-          element
-        );
-
-      }
     );
 
-  } else {
 
-    revealElements.forEach(
-      function (element) {
+document
+    .querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right"
+    )
+    .forEach(el => {
 
-        element.classList.add(
-          "visible"
-        );
-
-      }
-    );
-
-  }
-
-
-  /* =======================================================
-     IMAGE ERROR HANDLING
-  ======================================================= */
-
-  document
-    .querySelectorAll("img")
-    .forEach(function (img) {
-
-      img.addEventListener(
-        "error",
-        function () {
-
-          this.classList.add(
-            "image-error"
-          );
-
-        }
-      );
+        observer.observe(el);
 
     });
 
 
-});
+/* =====================================================
+   VIDEO CONTROLS
+===================================================== */
+
+document
+    .querySelectorAll(".video-card")
+    .forEach(card => {
+
+        const video =
+            card.querySelector("video");
+
+        const play =
+            card.querySelector(".play-btn");
+
+        const mute =
+            card.querySelector(".mute-btn");
+
+
+        play.addEventListener("click", () => {
+
+            if (video.paused) {
+
+                video.play();
+
+                play.textContent = "❚❚";
+
+            } else {
+
+                video.pause();
+
+                play.textContent = "▶";
+
+            }
+
+        });
+
+
+        mute.addEventListener("click", () => {
+
+            video.muted = !video.muted;
+
+            mute.textContent =
+                video.muted ? "🔇" : "🔊";
+
+        });
+
+    });
+
+
+/* =====================================================
+   CONTACT → WHATSAPP
+===================================================== */
+
+document
+    .getElementById("contactForm")
+    .addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        const name =
+            document.getElementById("name").value;
+
+        const phone =
+            document.getElementById("phone").value;
+
+        const message =
+            document.getElementById("message").value;
+
+
+        const text =
+`Assalam-o-Alaikum Amir Realty,
+
+Name: ${name}
+
+Phone: ${phone}
+
+Property Requirement:
+${message}`;
+
+
+        const url =
+            "https://wa.me/923086262091?text=" +
+            encodeURIComponent(text);
+
+
+        window.open(url, "_blank");
+
+    });
+
+
+/* =====================================================
+   LANDMARK AUTO SLIDER
+===================================================== */
+
+const slider =
+    document.querySelector(".landmark-track");
+
+let sliderSpeed = 0.6;
+
+function autoSlide() {
+
+    if (
+        slider &&
+        window.innerWidth > 700
+    ) {
+
+        slider.scrollLeft += sliderSpeed;
+
+        if (
+            slider.scrollLeft +
+            slider.clientWidth >=
+            slider.scrollWidth - 5
+        ) {
+
+            slider.scrollLeft = 0;
+
+        }
+
+    }
+
+    requestAnimationFrame(autoSlide);
+
+}
+
+autoSlide();
+
 
 </script>
 
